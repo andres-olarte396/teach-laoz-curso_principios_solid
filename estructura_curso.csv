@@ -1,0 +1,12 @@
+id,nombre,duracion_horas,cantidad_temas,cantidad_subtemas
+0,Diagnóstico y Nivelación,4,2,4
+1,Introducción a SOLID,8,2,4
+2,Single Responsibility Principle (SRP),18,4,8
+3,Open/Closed Principle (OCP),20,4,10
+4,Liskov Substitution Principle (LSP),18,4,8
+5,Interface Segregation Principle (ISP),16,4,8
+6,Dependency Inversion Principle (DIP),20,5,10
+7,Integración de SOLID,12,2,5
+8,Code Smells y Refactoring,14,2,6
+9,Casos de Estudio Reales,16,2,4
+10,Proyecto Integrador Final,24,1,3

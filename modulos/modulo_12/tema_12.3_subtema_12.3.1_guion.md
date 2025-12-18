@@ -1,0 +1,573 @@
+# Guion de Video: Saga Patterns
+
+**Duración**: 32 minutos  
+**Nivel**: Avanzado  
+**Requisitos previos**: Event-Driven Architecture, CQRS, Microservices
+
+---
+
+## [00:00 - 01:30] Introducción - El Problema de Transacciones Distribuidas
+
+**[PANTALLA: Título animado "Saga Patterns: Transacciones Distribuidas"]**
+
+🎬 **Narración**:
+"Bienvenidos al patrón más crítico en microservicios: Saga Patterns.
+
+Imagina que estás comprando en Amazon. Haces un pedido. Amazon necesita:
+1. Crear la orden
+2. Reservar inventario
+3. Procesar tu pago
+4. Programar el envío
+
+En una aplicación monolítica, esto sería una transacción ACID simple: todo o nada.
+
+Pero en microservicios, cada uno de estos pasos está en un servicio diferente, con su propia base de datos. No existe 'BEGIN TRANSACTION' distribuido sin complejidades enormes.
+
+¿Qué pasa si el inventario se reserva, el pago se procesa... y luego el servicio de envío está caído? Tienes dinero del cliente, inventario bloqueado, pero no puedes cumplir la orden.
+
+Hoy veremos cómo Saga Patterns resuelve esto con dos enfoques: Choreography y Orchestration."
+
+**[VISUAL: Diagrama de microservicios con DBs independientes]**
+
+---
+
+## [01:30 - 08:00] El Problema: Código Incorrecto
+
+**[PANTALLA: Código Java]**
+
+🎬 **Narración**:
+"Empecemos viendo el error más común que veo en arquitecturas de microservicios."
+
+**[VISUAL: Código problemático]**
+
+```java
+@Transactional  // ❌ Esto NO funciona en microservicios
+public class OrderService {
+    public Order createOrder(OrderRequest request) {
+        // Step 1: Save order (DB1)
+        Order order = orderRepository.save(new Order(request));
+        
+        // Step 2: Reserve inventory (DB2 - otro servicio!)
+        inventoryService.reserveStock(order.getItems());
+        
+        // Step 3: Charge payment (DB3 - otro servicio!)
+        PaymentResult payment = paymentService.charge(
+            order.getCustomerId(),
+            order.getTotal()
+        );
+        
+        if (!payment.isSuccess()) {
+            throw new PaymentException();  // ❌ Rollback?
+        }
+        
+        return order;
+    }
+}
+```
+
+**[ANIMACIÓN: Mostrar problema con rollback]**
+
+🎬 **Narración**:
+"Aquí hay 3 problemas fatales:
+
+**Problema 1**: `@Transactional` solo controla la DB local de OrderService. No puede hacer rollback de `inventoryService` ni `paymentService` que están en otras DBs.
+
+**Problema 2**: Si `paymentService.charge()` falla, Spring hace rollback de `orderRepository.save()`. Perfecto. Pero... ¿qué pasa con `inventoryService.reserveStock()` que ya ejecutó? El stock queda reservado permanentemente. Estado inconsistente.
+
+**Problema 3**: Acoplamiento fuerte. OrderService conoce y depende directamente de InventoryService y PaymentService."
+
+**[VISUAL: Timeline del fallo]**
+
+```
+Timeline:
+1. orderRepository.save() → ✅ Order saved in DB1
+2. inventoryService.reserveStock() → ✅ Stock reserved in DB2
+3. paymentService.charge() → ❌ FAIL
+4. Spring rollback → ✅ Order deleted from DB1
+5. ⚠️ Stock STILL reserved in DB2 → INCONSISTENT STATE
+
+Result: Order cancelled, but inventory locked forever
+```
+
+---
+
+## [08:00 - 15:00] Solución 1: Choreography Saga
+
+**[TRANSICIÓN: Arquitectura Choreography]**
+
+🎬 **Narración**:
+"La primera solución es Choreography: los servicios se coordinan mediante eventos, sin un coordinador central."
+
+**[VISUAL: Diagrama animado]**
+
+```
+Choreography Saga - Event-Driven Coordination
+
+┌──────────────┐
+│ OrderService │
+└──────┬───────┘
+       │ 1. Save order (PENDING)
+       │
+       ▼
+   OrderCreated
+       │
+       ├──────────────────┐
+       │                  │
+       ▼                  ▼
+┌──────────────┐   ┌──────────────┐
+│ InventoryService│ │PaymentService│
+└──────┬───────┘   └──────┬───────┘
+       │                  │
+       ▼                  ▼
+ StockReserved      PaymentCharged
+       │                  │
+       └────────┬─────────┘
+                ▼
+         ShippingService
+```
+
+**[DEMO: Código TypeScript]**
+
+```typescript
+// ========== Choreography Implementation ==========
+
+class OrderService {
+    async createOrder(command: CreateOrderCommand): Promise<void> {
+        // 1. Save order with PENDING status
+        const order = await this.orderRepo.save({
+            id: generateId(),
+            customerId: command.customerId,
+            items: command.items,
+            status: 'PENDING',  // ✅ Not CONFIRMED yet
+            total: calculateTotal(command.items)
+        });
+        
+        // 2. Publish event
+        await this.eventBus.publish({
+            type: 'OrderCreated',
+            orderId: order.id,
+            customerId: order.customerId,
+            items: order.items,
+            timestamp: new Date()
+        });
+    }
+    
+    // Compensation: Cancel if payment fails
+    @EventHandler('PaymentFailed')
+    async onPaymentFailed(event: PaymentFailedEvent): Promise<void> {
+        await this.orderRepo.update(event.orderId, {
+            status: 'CANCELLED',
+            cancelReason: event.reason
+        });
+        
+        console.log(`Order ${event.orderId} cancelled: ${event.reason}`);
+    }
+}
+
+class InventoryService {
+    @EventHandler('OrderCreated')
+    async onOrderCreated(event: OrderCreatedEvent): Promise<void> {
+        try {
+            // Reserve stock
+            await this.reserveStock(event.items);
+            
+            // Success → Publish
+            await this.eventBus.publish({
+                type: 'StockReserved',
+                orderId: event.orderId,
+                items: event.items
+            });
+            
+        } catch (error) {
+            // Failed → Publish failure
+            await this.eventBus.publish({
+                type: 'StockReservationFailed',
+                orderId: event.orderId,
+                reason: error.message
+            });
+        }
+    }
+    
+    // Compensation: Release stock if payment fails
+    @EventHandler('PaymentFailed')
+    async onPaymentFailed(event: PaymentFailedEvent): Promise<void> {
+        await this.releaseReservation(event.orderId);
+        console.log(`Stock released for order ${event.orderId}`);
+    }
+}
+
+class PaymentService {
+    @EventHandler('StockReserved')
+    async onStockReserved(event: StockReservedEvent): Promise<void> {
+        try {
+            await this.processPayment(event.orderId, event.total);
+            
+            await this.eventBus.publish({
+                type: 'PaymentCharged',
+                orderId: event.orderId
+            });
+            
+        } catch (error) {
+            await this.eventBus.publish({
+                type: 'PaymentFailed',
+                orderId: event.orderId,
+                reason: error.message
+            });
+        }
+    }
+}
+```
+
+🎬 **Narración**:
+"¿Ven la diferencia? Cada servicio:
+1. Escucha eventos
+2. Ejecuta SU transacción local
+3. Publica evento de éxito o fallo
+4. Define compensación si algo falla después
+
+No hay coordinador. Los servicios no se conocen entre sí. Solo eventos."
+
+**[ANIMACIÓN: Flujo con fallo]**
+
+```
+Failure Flow:
+1. OrderCreated → OrderService saves PENDING
+2. StockReserved → Inventory reserves
+3. PaymentFailed → Payment service fails
+4. PaymentFailed event → Triggers compensations:
+   - InventoryService: Release stock
+   - OrderService: Cancel order
+5. ✅ Consistent state: Order cancelled, stock available
+```
+
+---
+
+## [15:00 - 23:00] Solución 2: Orchestration Saga
+
+**[TRANSICIÓN: Arquitectura Orchestration]**
+
+🎬 **Narración**:
+"Choreography funciona, pero tiene problemas: es difícil ver el flujo completo, no hay timeout global, debugging es complicado.
+
+La alternativa es Orchestration: un coordinador central que dirige toda la saga."
+
+**[VISUAL: Diagrama Orchestration]**
+
+```
+Orchestration Saga - Centralized Coordination
+
+                ┌──────────────────────┐
+                │ Saga Orchestrator    │
+                │  (Coordinator)       │
+                └──────────┬───────────┘
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+        ▼                  ▼                  ▼
+  OrderService     InventoryService    PaymentService
+        │                  │                  │
+        ▼                  ▼                  ▼
+  Create Order      Reserve Stock      Charge Payment
+```
+
+**[DEMO: Código Java]**
+
+```java
+// ========== Orchestration Implementation ==========
+
+public class CreateOrderSagaOrchestrator {
+    private static final Duration SAGA_TIMEOUT = Duration.ofMinutes(5);
+    
+    private final OrderService orderService;
+    private final InventoryService inventoryService;
+    private final PaymentService paymentService;
+    private final SagaRepository sagaRepo;
+    
+    public SagaResult execute(CreateOrderCommand command) {
+        var sagaId = UUID.randomUUID().toString();
+        var startTime = Instant.now();
+        
+        // Save saga state
+        sagaRepo.save(new SagaState(sagaId, "STARTED", command));
+        
+        try {
+            // Step 1: Create order
+            var orderId = executeStep(sagaId, "CreateOrder", 
+                () -> orderService.create(command)
+            );
+            
+            // Check timeout
+            if (Duration.between(startTime, Instant.now()).compareTo(SAGA_TIMEOUT) > 0) {
+                throw new SagaTimeoutException("Saga timeout");
+            }
+            
+            // Step 2: Reserve stock
+            executeStep(sagaId, "ReserveStock",
+                () -> inventoryService.reserveStock(orderId, command.items())
+            );
+            
+            // Step 3: Charge payment
+            executeStep(sagaId, "ChargePayment",
+                () -> paymentService.charge(orderId, command.total())
+            );
+            
+            // ✅ Success
+            sagaRepo.update(sagaId, "COMPLETED");
+            return SagaResult.success(orderId);
+            
+        } catch (Exception e) {
+            // ❌ Failed → Compensate
+            compensate(sagaId);
+            return SagaResult.failure(e.getMessage());
+        }
+    }
+    
+    private <T> T executeStep(String sagaId, String stepName, Supplier<T> action) {
+        try {
+            T result = action.get();
+            
+            // Save successful step
+            sagaRepo.addStep(sagaId, new SagaStep(stepName, "COMPLETED", result));
+            
+            return result;
+            
+        } catch (Exception e) {
+            // Save failed step
+            sagaRepo.addStep(sagaId, new SagaStep(stepName, "FAILED", e.getMessage()));
+            throw e;
+        }
+    }
+    
+    private void compensate(String sagaId) {
+        var saga = sagaRepo.findById(sagaId);
+        
+        // Compensate in REVERSE order
+        var completedSteps = saga.getSteps()
+            .stream()
+            .filter(s -> s.status().equals("COMPLETED"))
+            .toList()
+            .reversed();
+        
+        for (var step : completedSteps) {
+            try {
+                compensateStep(step);
+            } catch (Exception e) {
+                // Log but continue compensating other steps
+                logger.error("Failed to compensate {}: {}", step.name(), e.getMessage());
+            }
+        }
+        
+        sagaRepo.update(sagaId, "COMPENSATED");
+    }
+    
+    private void compensateStep(SagaStep step) {
+        switch (step.name()) {
+            case "CreateOrder" -> orderService.cancel(step.result());
+            case "ReserveStock" -> inventoryService.releaseReservation(step.result());
+            case "ChargePayment" -> paymentService.refund(step.result());
+        }
+    }
+}
+```
+
+🎬 **Narración**:
+"El Orchestrator tiene visibilidad completa. Sabe qué steps ejecutó, cuáles fallaron, y puede compensar en orden inverso.
+
+Además, puede implementar timeout global, retry logic con exponential backoff, y almacenar el estado de la saga para recovery si el server crashea."
+
+**[DEMO: Retry con backoff]**
+
+```typescript
+private async executeStepWithRetry<T>(
+    sagaId: string,
+    stepName: string,
+    action: () => Promise<T>
+): Promise<T> {
+    const MAX_RETRIES = 3;
+    const RETRY_DELAYS = [1000, 2000, 4000]; // Exponential backoff
+    
+    for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+        try {
+            return await action();
+            
+        } catch (error) {
+            // Business error → No retry
+            if (error instanceof BusinessError) {
+                throw error;
+            }
+            
+            // Transient error → Retry
+            if (attempt < MAX_RETRIES - 1) {
+                await sleep(RETRY_DELAYS[attempt]);
+                console.log(`Retrying ${stepName} (attempt ${attempt + 2})`);
+                continue;
+            }
+            
+            throw error;
+        }
+    }
+}
+```
+
+---
+
+## [23:00 - 28:00] Comparación y Trade-offs
+
+**[PANTALLA: Tabla comparativa]**
+
+🎬 **Narración**:
+"¿Cuál usar? Depende de tus requisitos."
+
+**[VISUAL: Tabla animada]**
+
+```
+┌────────────────────┬──────────────────┬─────────────────┐
+│     Aspecto        │  Choreography    │  Orchestration  │
+├────────────────────┼──────────────────┼─────────────────┤
+│ Coordinación       │ Descentralizada  │ Centralizada    │
+│ Acoplamiento       │ ✅ Bajo          │ ⚠️ Alto         │
+│ Visibilidad        │ ❌ Difícil       │ ✅ Fácil        │
+│ Testing            │ ❌ Complejo      │ ✅ Simple       │
+│ Timeout global     │ ❌ No            │ ✅ Sí           │
+│ Retry logic        │ ⚠️ Difícil       │ ✅ Fácil        │
+│ Escalabilidad      │ ✅ Alta          │ ⚠️ Media        │
+│ Debugging          │ ❌ Difícil       │ ✅ Fácil        │
+└────────────────────┴──────────────────┴─────────────────┘
+```
+
+🎬 **Narración**:
+"**Usa Choreography cuando**:
+- Workflow es simple (2-4 steps)
+- Servicios son muy independientes
+- Desacoplamiento es crítico
+- Tolerancia a eventual consistency alta
+
+Ejemplos: Notificaciones, analytics, logs.
+
+**Usa Orchestration cuando**:
+- Workflow es complejo (5+ steps)
+- Requieres timeout preciso
+- Debugging y monitoring son prioritarios
+- Transacción es crítica (pagos, finanzas)
+
+Ejemplos: Pedidos e-commerce, reservas, procesos bancarios."
+
+**[DEMO: Código real]**
+
+🎬 **Narración**:
+"En la práctica, muchas empresas usan AMBOS. Netflix usa Choreography para eventos de dominio (usuario vio video → actualizar recomendaciones). Pero usa Orchestration para procesos críticos como facturación."
+
+---
+
+## [28:00 - 32:00] Compensación Avanzada y Resumen
+
+**[PANTALLA: Compensación avanzada]**
+
+🎬 **Narración**:
+"Un concepto crítico: la compensación NO siempre es rollback perfecto."
+
+**[VISUAL: Ejemplos no compensables]**
+
+```
+Operaciones NO Compensables Perfectamente:
+
+1. ❌ Email enviado
+   → No puedes "des-enviar" un email
+   → Compensación: Enviar email de cancelación
+
+2. ❌ Pago procesado por Stripe
+   → No puedes hacer rollback instantáneo
+   → Compensación: Iniciar refund (tarda 5-10 días)
+
+3. ❌ Stock físico vendido y enviado
+   → Producto ya salió del warehouse
+   → Compensación: Esperar devolución o compensar con crédito
+
+4. ❌ Notificación push enviada
+   → Usuario ya la vio
+   → Compensación: Enviar actualización
+```
+
+🎬 **Narración**:
+"Por eso en Saga Patterns hablamos de 'compensación' y no 'rollback'. Es una transacción INVERSA, pero no siempre restaura el estado exacto previo.
+
+A veces necesitas **Forward Recovery**: en lugar de cancelar todo, completar la saga de forma alternativa."
+
+**[EJEMPLO: Forward Recovery]**
+
+```python
+# Forward Recovery Example
+async def book_flight_saga():
+    try:
+        # Preferred airline
+        await book_flight(airline='United')
+    except NoSeatsAvailableError:
+        # Forward recovery: Try alternative
+        await book_flight(airline='American')  # ✅ Continue saga
+```
+
+🎬 **Narración**:
+"Recapitulemos:
+
+✅ **Saga Pattern**: Transacciones distribuidas como secuencia de transacciones locales
+✅ **Choreography**: Eventos, desacoplamiento, difícil debugging
+✅ **Orchestration**: Coordinador central, fácil debugging, acoplamiento
+✅ **Compensación**: Transacción inversa, no siempre rollback perfecto
+✅ **Forward Recovery**: Completar saga de forma alternativa
+
+En el próximo video implementaremos Sagas con frameworks reales: Temporal, Camunda, y exploraremos tecnologías de mensajería como Kafka y RabbitMQ.
+
+¡Hasta la próxima!"
+
+**[PANTALLA: Recursos]**
+
+- 📚 Ejercicios: Food delivery Choreography, Bank transfer Orchestration
+- 💡 Proyecto: Concert ticket reservation con timeout y compensación
+- 🔗 Recursos: Temporal, Camunda, Saga Pattern papers
+- ▶️ Próximo: Messaging Technologies (Kafka, RabbitMQ, EventStoreDB)
+
+---
+
+## Recursos Visuales
+
+### Animaciones Clave:
+1. **Problema**: Transacción distribuida fallando sin rollback
+2. **Choreography**: Eventos fluyendo entre servicios con compensación
+3. **Orchestration**: Coordinador ejecutando steps secuencialmente
+4. **Comparación**: Side-by-side Choreography vs Orchestration
+5. **Forward Recovery**: Intentando alternativas en lugar de cancelar
+
+### Código a Mostrar:
+- TypeScript: Choreography completa con OrderService, InventoryService, PaymentService
+- Java: Orchestrator con retry, timeout, compensación
+- Python: Forward recovery con fallback
+
+### Demos en Vivo:
+1. Choreography saga ejecutándose (mostrar eventos en logs)
+2. Orchestration saga con fallo en step 2 → Compensación automática
+3. Retry con exponential backoff
+4. Saga state guardado en DB para recovery
+
+### Diagramas:
+1. Microservices con DBs independientes (el problema)
+2. Choreography flow con eventos
+3. Orchestration flow con coordinador central
+4. Compensación en orden inverso
+5. Forward recovery decision tree
+
+## Notas para el Editor
+
+- Resaltar visualmente diferencia Choreography (descentralizado) vs Orchestration (centralizado)
+- Animación de compensación ejecutándose en ORDEN INVERSO
+- Timeline mostrando flujo de eventos con timestamps
+- Comparación lado a lado: mismo escenario con ambos patterns
+- Zoom en saga state storage (tabla en DB)
+- Destacar retry delays (1s → 2s → 4s exponential backoff)
+
+## B-Roll Sugerido
+
+- Arquitecturas de sistemas reales con Sagas (Netflix, Uber Eats)
+- Dashboards de Temporal/Camunda mostrando sagas en ejecución
+- Diagramas de AWS Step Functions (orchestration managed)
+- Código de proyectos open source (Axon Framework, NServiceBus)
+- Logs de compensación ejecutándose en producción

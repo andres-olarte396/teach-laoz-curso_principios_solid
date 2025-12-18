@@ -1,0 +1,10 @@
+{
+  "id": "teach-laoz-curso_principios_solid",
+  "title": "Principios SOLID en Programación Orientada a Objetos",
+  "description": "Domina los principios fundamentales de diseño de software (SOLID) para crear código mantenible, escalable y robusto en POO.",
+  "level": "Avanzado",
+  "duration_hours": 20,
+  "author": "L4OZ Learning",
+  "total_modules": 14,
+  "version": "1.0.0"
+}
