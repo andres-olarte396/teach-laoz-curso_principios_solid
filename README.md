@@ -17,24 +17,32 @@ Este curso de **170 horas** cubre exhaustivamente los 5 principios SOLID de dise
 ## 📚 Estructura Completa por Módulo
 
 ### Módulo 0: Diagnóstico y Nivelación (4 horas)
+
 ✅ **Temas**: 2 | **Subtemas**: 4 | **Archivos**: 8
+
 - Fundamentos de POO (Clases, Objetos, Herencia, Polimorfismo)
 - Testing y Diseño (Unit Testing, Patrones básicos)
 
 ### Módulo 1. Introducción a SOLID (8 horas)
+
 ✅ **Temas**: 2 | **Subtemas**: 4 | **Archivos**: 8
+
 - Historia y Contexto (Origen SOLID, Software Legacy)
 - Visión General de SOLID (5 Principios, Beneficios)
 
 ### Módulo 2: Single Responsibility Principle (18 horas)
+
 ✅ **Temas**: 4 | **Subtemas**: 8 | **Archivos**: 16
+
 - Fundamentos del SRP (Definición, Identificación)
 - Violaciones Comunes (God Classes, Acoplamiento/Cohesión)
 - Refactoring hacia SRP (Extract Class/Method, Separation of Concerns)
 - SRP Multi-lenguaje (Java/C#, TypeScript/Python)
 
 ### Módulo 3: Open/Closed Principle (20 horas)
+
 ✅ **Temas**: 5 | **Subtemas**: 10 | **Archivos**: 20
+
 - Fundamentos del OCP (Definición, Abstracción/Polimorfismo)
 - Patrones de Diseño (Strategy, Template Method, Decorator)
 - Arquitecturas Extensibles (Plugin Architecture, Event-Driven Design)
@@ -42,21 +50,27 @@ Este curso de **170 horas** cubre exhaustivamente los 5 principios SOLID de dise
 - OCP Multi-lenguaje (Java reflection, TypeScript type guards, Python protocols)
 
 ### Módulo 4: Liskov Substitution Principle (18 horas)
+
 ✅ **Temas**: 4 | **Subtemas**: 8 | **Archivos**: 16
+
 - Fundamentos del LSP (Contratos, Precondiciones/Postcondiciones)
 - Composición sobre Herencia (Design by Contract)
 - Testing para LSP (Property-based testing, Contract tests)
 - LSP Multi-lenguaje (Covarianza, Structural typing, Duck typing)
 
 ### Módulo 5: Interface Segregation Principle (16 horas)
+
 ✅ **Temas**: 4 | **Subtemas**: 8 | **Archivos**: 16
+
 - Fundamentos del ISP (Definición, Fat Interfaces)
 - Patrones de Segregación (Adapter, Facade)
 - Detección de Violaciones (Métricas, Herramientas)
 - ISP Multi-lenguaje (Java default methods, TypeScript opcionales, Python protocols)
 
 ### Módulo 6: Dependency Inversion Principle (20 horas)
+
 ✅ **Temas**: 5 | **Subtemas**: 10 | **Archivos**: 20
+
 - Fundamentos del DIP (Abstracciones estables)
 - Dependency Injection (Constructor/Setter/Field injection)
 - IoC Containers (Spring, scopes, qualifiers)
@@ -64,24 +78,32 @@ Este curso de **170 horas** cubre exhaustivamente los 5 principios SOLID de dise
 - DIP Multi-lenguaje (Factory pattern, InversifyJS, FastAPI Depends)
 
 ### Módulo 7: Integración de SOLID (12 horas)
+
 ✅ **Temas**: 3 | **Subtemas**: 6 | **Archivos**: 12
+
 - Interrelaciones entre Principios (SRP+DIP, OCP+LSP, Patrones GoF)
 - Trade-offs y Balance (Over-engineering, Anti-patrones)
 - Testing de Código SOLID (Unit/Integration/Contract tests, Métricas)
 
 ### Módulo 8: Code Smells y Refactoring (14 horas)
+
 ✅ **Temas**: 2 | **Subtemas**: 6 | **Archivos**: 12
+
 - Code Smells Comunes (Long Method, Large Class, Feature Envy, Shotgun Surgery)
 - Violaciones SOLID (Identificación, Detección automática)
 - Catálogo de Refactorings (Extract Method, Replace Conditional, Refactoring seguro)
 
 ### Módulo 9: Casos de Estudio Reales (16 horas)
+
 ✅ **Temas**: 2 | **Subtemas**: 4 | **Archivos**: 8
+
 - Análisis Open Source (Spring Framework analysis, ASP.NET Core)
 - Refactoring Legacy (Sistema monolítico, E-commerce platform)
 
 ### Módulo 10: Proyecto Integrador Final (24 horas)
+
 ✅ **Temas**: 2 | **Subtemas**: 4 | **Archivos**: 8
+
 - Sistema de Biblioteca Digital (Arquitectura hexagonal completa)
 - Implementación Multi-lenguaje (Java, TypeScript, Python)
 - Evaluación y Presentación (Rúbrica detallada, Criterios de evaluación)
@@ -89,6 +111,7 @@ Este curso de **170 horas** cubre exhaustivamente los 5 principios SOLID de dise
 ## 🎯 Cobertura de Contenido
 
 ### Principios SOLID
+
 - ✅ **SRP** - Single Responsibility Principle (18 horas)
 - ✅ **OCP** - Open/Closed Principle (20 horas)
 - ✅ **LSP** - Liskov Substitution Principle (18 horas)
@@ -96,6 +119,7 @@ Este curso de **170 horas** cubre exhaustivamente los 5 principios SOLID de dise
 - ✅ **DIP** - Dependency Inversion Principle (20 horas)
 
 ### Patrones de Diseño Cubiertos
+
 1. **Strategy Pattern** - Algoritmos intercambiables
 2. **Template Method Pattern** - Esqueleto algorítmico
 3. **Decorator Pattern** - Responsabilidades adicionales
@@ -108,6 +132,7 @@ Este curso de **170 horas** cubre exhaustivamente los 5 principios SOLID de dise
 10. **State Pattern** - Comportamiento según estado
 
 ### Arquitecturas Implementadas
+
 - **Layered Architecture** - Separación de capas (UI/Logic/Data)
 - **MVC** - Model-View-Controller
 - **Hexagonal Architecture** - Ports & Adapters
@@ -115,7 +140,9 @@ Este curso de **170 horas** cubre exhaustivamente los 5 principios SOLID de dise
 - **Event Sourcing** - Persistencia basada en eventos
 
 ### Frameworks y Tecnologías
+
 **Java Ecosystem:**
+
 - Spring Framework (DI, Events, Bean lifecycle)
 - JUnit 5 (Testing)
 - Mockito (Mocking)
@@ -123,21 +150,25 @@ Este curso de **170 horas** cubre exhaustivamente los 5 principios SOLID de dise
 - JDepend (Métricas de acoplamiento)
 
 **C# Ecosystem:**
+
 - ASP.NET Core (DI, Middleware)
 - NUnit (Testing)
 - Moq (Mocking)
 
 **TypeScript Ecosystem:**
+
 - NestJS (DI, Decorators)
 - Jest (Testing)
 - InversifyJS (DI Container)
 
 **Python Ecosystem:**
+
 - FastAPI (DI, Dependency injection)
 - pytest (Testing)
 - dependency-injector (DI Container)
 
 ### Herramientas de Calidad
+
 - **SonarQube** - Análisis de código estático
 - **PMD** - Detector de code smells
 - **IntelliJ IDEA Metrics** - Métricas de complejidad
@@ -149,21 +180,25 @@ Este curso de **170 horas** cubre exhaustivamente los 5 principios SOLID de dise
 ## 📝 Tipos de Ejercicios por Nivel
 
 ### ⭐ Nivel 1. Conceptual
+
 - Identificación de violaciones
 - Quiz teóricos
 - Análisis de código dado
 
 ### ⭐⭐ Nivel 2: Aplicación Básica
+
 - Refactorings simples
 - Implementación de patrones básicos
 - Tests unitarios
 
 ### ⭐⭐⭐ Nivel 3: Integración
+
 - Sistemas completos multi-componente
 - Arquitecturas en capas
 - Suite de tests completa
 
 ### ⭐⭐⭐⭐ Nivel 4: Avanzado/Investigación
+
 - Frameworks personalizados
 - Análisis de proyectos legacy reales
 - Herramientas de análisis automático
@@ -172,19 +207,25 @@ Este curso de **170 horas** cubre exhaustivamente los 5 principios SOLID de dise
 ## 🎓 Rutas de Aprendizaje
 
 ### Ruta Rápida (Esencial)
+
 **Duración**: ~80 horas
+
 - Módulos 0-6 (principios fundamentales)
 - Ejercicios nivel ⭐ y ⭐⭐
 - Proyecto final simplificado
 
 ### Ruta Completa (Recomendada)
+
 **Duración**: ~170 horas
+
 - Todos los módulos 0-10
 - Ejercicios hasta nivel ⭐⭐⭐
 - Proyecto final completo
 
 ### Ruta Avanzada (Especialización)
+
 **Duración**: ~220 horas
+
 - Todos los módulos con profundización
 - Todos los ejercicios (incluyendo ⭐⭐⭐⭐)
 - Proyecto final multi-lenguaje con extensiones
@@ -192,15 +233,17 @@ Este curso de **170 horas** cubre exhaustivamente los 5 principios SOLID de dise
 ## 📊 Evaluación y Certificación
 
 ### Criterios de Evaluación
-| Aspecto | Peso |
-|---------|------|
-| Funcionalidad del proyecto | 20% |
-| Aplicación correcta de SOLID | 30% |
-| Calidad de código | 20% |
-| Cobertura de tests | 20% |
-| Documentación y presentación | 10% |
+
+| Aspecto                      | Peso |
+| ---------------------------- | ---- |
+| Funcionalidad del proyecto   | 20%  |
+| Aplicación correcta de SOLID | 30%  |
+| Calidad de código            | 20%  |
+| Cobertura de tests           | 20%  |
+| Documentación y presentación | 10%  |
 
 ### Niveles de Certificación
+
 - **Aprobado** (60-74%): Comprensión básica de SOLID
 - **Bueno** (75-89%): Aplicación correcta de principios
 - **Excelente** (90-100%): Maestría en diseño SOLID
@@ -222,17 +265,17 @@ Al completar este curso, los estudiantes podrán:
 
 ## 📅 Cronograma Sugerido (12 semanas)
 
-| Semana | Módulos | Actividades |
-|--------|---------|-------------|
-| 1 | 0, 1 | Nivelación + Introducción SOLID |
-| 2-3 | 2 | SRP profundo |
-| 4-5 | 3 | OCP y patrones |
-| 6 | 4 | LSP y contratos |
-| 7 | 5 | ISP y segregación |
-| 8-9 | 6 | DIP, IoC y arquitecturas |
-| 10 | 7, 8 | Integración + Refactoring |
-| 11 | 9 | Casos de estudio |
-| 12 | 10 | Proyecto final |
+| Semana | Módulos | Actividades                     |
+| ------ | ------- | ------------------------------- |
+| 1      | 0, 1    | Nivelación + Introducción SOLID |
+| 2-3    | 2       | SRP profundo                    |
+| 4-5    | 3       | OCP y patrones                  |
+| 6      | 4       | LSP y contratos                 |
+| 7      | 5       | ISP y segregación               |
+| 8-9    | 6       | DIP, IoC y arquitecturas        |
+| 10     | 7, 8    | Integración + Refactoring       |
+| 11     | 9       | Casos de estudio                |
+| 12     | 10      | Proyecto final                  |
 
 ## 🚀 Próximos Pasos
 
@@ -245,11 +288,13 @@ Al completar este curso, los estudiantes podrán:
 ## 📚 Recursos Bibliográficos
 
 ### Lecturas Obligatorias
+
 - **Clean Code** - Robert C. Martin (Uncle Bob)
 - **Agile Software Development: Principles, Patterns, and Practices** - Robert C. Martin
 - **Design Patterns: Elements of Reusable Object-Oriented Software** - Gang of Four
 
 ### Lecturas Complementarias
+
 - **Refactoring** - Martin Fowler
 - **Clean Architecture** - Robert C. Martin
 - **Domain-Driven Design** - Eric Evans
