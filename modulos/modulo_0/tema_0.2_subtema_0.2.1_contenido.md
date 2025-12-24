@@ -1,4 +1,4 @@
-# Subtema 0.2.1: Unit Testing Básico con JUnit
+# Subtema 0.2.1. Unit Testing Básico con JUnit
 
 ## 1. Contexto y Motivación
 

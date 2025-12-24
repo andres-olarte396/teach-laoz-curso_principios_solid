@@ -9,7 +9,7 @@ En este tema exploraremos dos paradigmas fundamentales para arquitecturas cloud-
 
 ---
 
-## Parte 1: Serverless Computing
+## Parte 1. Serverless Computing
 
 ### ¿Qué es Serverless?
 

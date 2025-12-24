@@ -47,7 +47,7 @@ public class OrderManager {
 
 ## Rigidez: Imposibilidad de Extensión
 
-### Problema 1: Métodos Privados Cerrados
+### Problema 1. Métodos Privados Cerrados
 
 ```java
 public class InvoiceGenerator {
@@ -257,7 +257,7 @@ ReportGenerator csvGenerator = new ReportGenerator(salesData, csvFormatter);
 
 ## Refactoring: Decomposición de God Classes
 
-### Paso 1: Identificar Responsabilidades
+### Paso 1. Identificar Responsabilidades
 
 Usar técnica de "Actor" o "Razón de Cambio":
 - **Validación**: Cambia cuando cambian reglas de negocio

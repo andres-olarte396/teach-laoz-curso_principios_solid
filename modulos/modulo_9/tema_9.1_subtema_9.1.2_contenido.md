@@ -42,7 +42,7 @@ class OrderManager {
 
 ### Plan de Refactoring
 
-#### Fase 1: Escribir Tests de Caracterización
+#### Fase 1. Escribir Tests de Caracterización
 
 ```java
 @Test

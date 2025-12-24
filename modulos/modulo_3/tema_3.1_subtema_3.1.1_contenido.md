@@ -190,7 +190,7 @@ public class InvoiceGenerator {
 ```
 
 **Cambios recientes**:
-- Semana 1: Añadido soporte HTML
+- Semana 1. Añadido soporte HTML
 - Semana 3: Añadido soporte XML
 - Semana 5: Añadido soporte JSON (requirió modificar el if-else nuevamente)
 

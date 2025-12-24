@@ -1,6 +1,6 @@
 # Ejercicios: 12-Factor App y Containerización
 
-## ⭐ Ejercicio 1: Identificar Violaciones de 12-Factor
+## ⭐ Ejercicio 1. Identificar Violaciones de 12-Factor
 
 **Descripción**: Analiza el siguiente código e identifica qué factores de 12-Factor App se están violando.
 
@@ -12,7 +12,7 @@ const express = require('express');
 const fs = require('fs');
 const app = express();
 
-// ❌ Problema 1: ¿Qué factor viola?
+// ❌ Problema 1. ¿Qué factor viola?
 const config = {
     database: {
         host: 'localhost',
@@ -219,7 +219,7 @@ export class StorageService {
 ```
 
 ```typescript
-// src/logger.ts - Factor 11: Structured logging to stdout
+// src/logger.ts - Factor 11. Structured logging to stdout
 interface LogEntry {
     timestamp: string;
     level: string;
@@ -484,7 +484,7 @@ describe('12-Factor App Integration Tests', () => {
         expect(JSON.parse(sessionData!).userId).toBe('user123');
     });
     
-    test('Factor 11: Logs are structured JSON to stdout', () => {
+    test('Factor 11. Logs are structured JSON to stdout', () => {
         const consoleSpy = jest.spyOn(console, 'log');
         
         logger.info('Test message', { userId: 'user123' });
@@ -517,7 +517,7 @@ describe('12-Factor App Integration Tests', () => {
 **Implementación**:
 
 ```dockerfile
-# Stage 1: Build
+# Stage 1. Build
 FROM maven:3.9-eclipse-temurin-17 AS builder
 
 WORKDIR /app

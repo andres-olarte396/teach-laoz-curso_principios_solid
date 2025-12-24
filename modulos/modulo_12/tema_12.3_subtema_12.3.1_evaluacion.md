@@ -1,6 +1,6 @@
 # Evaluación: Saga Patterns
 
-## Parte 1: Conceptos Fundamentales (25 puntos)
+## Parte 1. Conceptos Fundamentales (25 puntos)
 
 ### Pregunta 1 (8 puntos)
 
@@ -67,7 +67,7 @@ Proporciona un ejemplo de una operación que **no puede compensarse completament
 
 ## Parte 2: Análisis y Diseño (30 puntos)
 
-### Ejercicio 1: Diseñar Choreography Saga (15 puntos)
+### Ejercicio 1. Diseñar Choreography Saga (15 puntos)
 
 Diseña una Choreography Saga para un sistema de **préstamos bibliotecarios** con:
 

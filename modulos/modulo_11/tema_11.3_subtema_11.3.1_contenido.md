@@ -311,7 +311,7 @@ public class OrderSaga {
         SagaState state = new SagaState(sagaId);
         
         try {
-            // Step 1: Create Order
+            // Step 1. Create Order
             state.addStep("createOrder");
             String orderId = orderService.createOrder(command);
             state.completeStep("createOrder", orderId);

@@ -157,7 +157,7 @@ order.process(); // ShippedState ejecuta
 
 ## Detección de Violaciones
 
-### Heurística 1: Múltiples if/else Similares
+### Heurística 1. Múltiples if/else Similares
 
 ```java
 // ❌ MAL: Patrón repetido
@@ -220,7 +220,7 @@ switch (order.getType()) { /* ... */ }
 
 ## Refactoring: Replace Conditional with Polymorphism
 
-### Paso 1: Identificar Patrón
+### Paso 1. Identificar Patrón
 
 ```java
 if (type == A) { doA(); }

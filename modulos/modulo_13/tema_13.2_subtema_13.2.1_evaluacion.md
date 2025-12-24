@@ -5,7 +5,7 @@
 
 ---
 
-## Parte 1: Preguntas Teóricas (20 puntos)
+## Parte 1. Preguntas Teóricas (20 puntos)
 
 ### Pregunta 1 (5 puntos)
 
@@ -40,7 +40,7 @@ Describe el proceso de un **Rolling Update** con `maxUnavailable: 1` y `maxSurge
 
 ```
 Estado inicial: 3 pods (v1)
-Paso 1: Crear 1 pod nuevo (v2) - total 4 pods (maxSurge=1)
+Paso 1. Crear 1 pod nuevo (v2) - total 4 pods (maxSurge=1)
 Paso 2: Terminar 1 pod viejo (v1) - total 3 pods
 Paso 3: Crear otro pod nuevo (v2) - total 4 pods
 Paso 4: Terminar otro pod viejo (v1) - total 3 pods
@@ -242,7 +242,7 @@ PostgreSQL   Redis
 
 ---
 
-### Tarea 3.1: Backend API (15 puntos)
+### Tarea 3.1. Backend API (15 puntos)
 
 Implementa el backend en TypeScript con Express:
 
@@ -832,12 +832,12 @@ spec:
 
 | Sección                  | Puntos | Criterios                                                        |
 | ------------------------ | ------ | ---------------------------------------------------------------- |
-| Parte 1: Teoría          | 20     | Comprensión de conceptos de Kubernetes                           |
+| Parte 1. Teoría          | 20     | Comprensión de conceptos de Kubernetes                           |
 | Parte 2: Análisis        | 25     | Identificación y solución de problemas en manifests              |
-| Parte 3.1: Backend       | 15     | Implementación correcta con health checks                        |
+| Parte 3.1. Backend       | 15     | Implementación correcta con health checks                        |
 | Parte 3.2: Manifests     | 25     | ConfigMap, Secret, Deployments, Services correctos               |
 | Parte 3.3: Testing       | 15     | Deployment exitoso, API funcional, self-healing verificado       |
-| Bonus 1: HPA             | 5      | Autoscaling funcional                                            |
+| Bonus 1. HPA             | 5      | Autoscaling funcional                                            |
 | Bonus 2: Network Policy  | 5      | Seguridad de red implementada                                    |
 | **Total**                | **110** | **(100 base + 10 bonus)**                                       |
 

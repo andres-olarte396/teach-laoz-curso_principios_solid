@@ -18,7 +18,7 @@ async function createOrder(orderData: CreateOrderData): Promise<Order> {
     await db.beginTransaction();  // ❌ Solo funciona en una DB
     
     try {
-        // Servicio 1: Orders
+        // Servicio 1. Orders
         const order = await orderService.create(orderData);
         
         // Servicio 2: Inventory (otra DB)
@@ -115,7 +115,7 @@ interface PaymentFailedEvent {
     reason: string;
 }
 
-// ========== Service 1: Order Service ==========
+// ========== Service 1. Order Service ==========
 
 class OrderService {
     async createOrder(command: CreateOrderCommand): Promise<void> {
@@ -405,7 +405,7 @@ class CreateOrderSagaOrchestrator {
         });
         
         try {
-            // Step 1: Create Order
+            // Step 1. Create Order
             const orderId = await this.executeStep(sagaId, 'CreateOrder', async () => {
                 return await this.orderService.create(command);
             });
@@ -790,7 +790,7 @@ En lugar de rollback, **completar la saga de forma alternativa**.
 class OrderSagaWithForwardRecovery:
     async def execute(self, command: CreateOrderCommand):
         try:
-            # Step 1: Reserve stock
+            # Step 1. Reserve stock
             await self.inventory_service.reserve_stock(command.items)
             
         except InsufficientStockException as e:

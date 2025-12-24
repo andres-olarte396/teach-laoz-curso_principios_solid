@@ -1,6 +1,6 @@
 # Ejercicios: Kubernetes Orchestration
 
-## ⭐ Ejercicio 1: Deployment Básico y Escalado
+## ⭐ Ejercicio 1. Deployment Básico y Escalado
 
 **Objetivo**: Crear un deployment, escalar manualmente y verificar self-healing.
 

@@ -1,8 +1,8 @@
 # Ejercicios: SRP y Testing
 
-## Nivel 1: Identificación de Problemas de Testing ⭐
+## Nivel 1. Identificación de Problemas de Testing ⭐
 
-### Ejercicio 1.1: Analizar Testabilidad
+### Ejercicio 1.1. Analizar Testabilidad
 
 Evalúa la testabilidad de estas clases y explica por qué son difíciles de testear:
 
@@ -228,7 +228,7 @@ void testProcessOrder() {
 
 ## Nivel 2: Refactoring para Testabilidad ⭐⭐
 
-### Ejercicio 2.1: Hacer Clase Testeable
+### Ejercicio 2.1. Hacer Clase Testeable
 
 Refactoriza esta clase para hacerla completamente testeable:
 
@@ -662,7 +662,7 @@ class PaymentProcessorIntegrationTest {
 
 ## Nivel 3: TDD con SRP ⭐⭐⭐
 
-### Ejercicio 3.1: Desarrollar con TDD
+### Ejercicio 3.1. Desarrollar con TDD
 
 Usa TDD para crear un sistema de gestión de inventario que cumpla SRP.
 
@@ -688,7 +688,7 @@ Usa TDD para crear un sistema de gestión de inventario que cumpla SRP.
 
 ## Nivel 4: Mutation Testing ⭐⭐⭐⭐
 
-### Ejercicio 4.1: Validar Calidad de Tests
+### Ejercicio 4.1. Validar Calidad de Tests
 
 Usa PIT (Mutation Testing) para validar la calidad de tus tests.
 

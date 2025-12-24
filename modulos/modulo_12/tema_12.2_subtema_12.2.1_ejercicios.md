@@ -1,6 +1,6 @@
 # Ejercicios: CQRS Pattern Avanzado
 
-## ⭐ Ejercicio 1: Identificar Violaciones de CQRS
+## ⭐ Ejercicio 1. Identificar Violaciones de CQRS
 
 Analiza este código e identifica por qué NO sigue CQRS:
 
@@ -236,7 +236,7 @@ class Article {
 
 // ========== READ MODELS ==========
 
-// Read Model 1: Lista de artículos
+// Read Model 1. Lista de artículos
 interface ArticleListView {
     articleId: string;
     title: string;
@@ -271,7 +271,7 @@ interface AuthorStatsView {
 
 // ========== PROJECTIONS ==========
 
-// Projection 1: Article List
+// Projection 1. Article List
 class ArticleListProjection {
     async on(event: ArticlePublishedEvent): Promise<void> {
         await this.db.insert('article_list_views', {
@@ -946,7 +946,7 @@ app.get('/api/orders/:orderId', async (req, res) => {
 
 // ========== FRONTEND STRATEGIES ==========
 
-// Strategy 1: Polling
+// Strategy 1. Polling
 async function createOrderWithPolling(orderData: CreateOrderDto) {
     // Create order
     const response = await fetch('/api/orders', {

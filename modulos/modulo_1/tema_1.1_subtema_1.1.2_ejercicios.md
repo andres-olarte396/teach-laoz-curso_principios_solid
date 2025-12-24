@@ -1,8 +1,8 @@
 # Ejercicios: Aplicación Práctica del SRP
 
-## Nivel 1: Refactorización Guiada ⭐
+## Nivel 1. Refactorización Guiada ⭐
 
-### Ejercicio 1.1: Identificar Técnicas de Extracción
+### Ejercicio 1.1. Identificar Técnicas de Extracción
 
 Analiza el siguiente código y determina qué técnica de extracción (Extract Class, Extract Service, Extract Interface, Move Method) aplicarías para cada responsabilidad:
 
@@ -115,7 +115,7 @@ public class Product {
 
 ## Nivel 2: Refactorización Completa ⭐⭐
 
-### Ejercicio 2.1: Refactorizar Sistema de Gestión de Tareas
+### Ejercicio 2.1. Refactorizar Sistema de Gestión de Tareas
 
 Dado el siguiente código que viola SRP, refactorízalo aplicando los 5 pasos del proceso:
 
@@ -128,7 +128,7 @@ public class Task {
     private TaskStatus status;
     private LocalDateTime dueDate;
     
-    // Responsabilidad 1: Validación
+    // Responsabilidad 1. Validación
     public boolean isValid() {
         if (title == null || title.isEmpty()) {
             return false;
@@ -213,7 +213,7 @@ public class Task {
 ```
 
 **Tareas:**
-1. Aplicar Paso 1: Identificar responsabilidades y sus actores
+1. Aplicar Paso 1. Identificar responsabilidades y sus actores
 2. Aplicar Paso 2: Analizar dependencias de datos
 3. Aplicar Paso 3: Extraer clases nuevas
 4. Aplicar Paso 4: Escribir código cliente actualizado
@@ -223,7 +223,7 @@ public class Task {
 
 **SOLUCIÓN MODELO:**
 
-**PASO 1: Identificar Responsabilidades**
+**PASO 1. Identificar Responsabilidades**
 
 | Responsabilidad | Métodos | Actor que pide cambios |
 |----------------|---------|------------------------|
@@ -247,7 +247,7 @@ toJSON() → usa id, title, status
 **PASO 3: Extraer Clases**
 
 ```java
-// ✅ Clase 1: Modelo de dominio puro
+// ✅ Clase 1. Modelo de dominio puro
 public class Task {
     private final String id;
     private String title;
@@ -651,7 +651,7 @@ class JSONTaskFormatterTest {
 
 ## Nivel 3: Diseño desde Cero ⭐⭐⭐
 
-### Ejercicio 3.1: Sistema de Gestión de Inventario
+### Ejercicio 3.1. Sistema de Gestión de Inventario
 
 Diseña un sistema de gestión de inventario para una tienda online que cumpla con SRP. El sistema debe:
 
@@ -686,7 +686,7 @@ Responsabilidades identificadas:
 
 ## Nivel 4: Proyecto Integrador ⭐⭐⭐⭐
 
-### Ejercicio 4.1: Sistema de Biblioteca Digital
+### Ejercicio 4.1. Sistema de Biblioteca Digital
 
 Diseña e implementa un sistema completo de biblioteca digital que permita:
 

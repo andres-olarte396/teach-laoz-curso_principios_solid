@@ -1,6 +1,6 @@
 # Ejercicios: Event Sourcing y CQRS
 
-## ⭐ Ejercicio 1: Implementar Event Replay
+## ⭐ Ejercicio 1. Implementar Event Replay
 
 Dado un aggregate con estos eventos:
 
@@ -634,7 +634,7 @@ def test_snapshot_performance():
     
     print("\n=== Performance Test ===")
     
-    # Test 1: Load with snapshots
+    # Test 1. Load with snapshots
     start = time.time()
     conversation = event_store.load_aggregate(conversation_id)
     duration_with_snapshot = time.time() - start
@@ -695,7 +695,7 @@ Creating conversation with 500 messages...
 Implementa evolución de esquema de eventos sin romper compatibilidad.
 
 **Escenario**:
-- v1: `OrderCreatedEvent` tiene solo `total: number`
+- v1. `OrderCreatedEvent` tiene solo `total: number`
 - v2: Necesitas cambiar a `total: { amount: number, currency: string }`
 - Sistema debe leer eventos v1 y v2
 

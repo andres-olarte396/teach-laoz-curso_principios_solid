@@ -233,7 +233,7 @@ public class ShoppingCart {
 
 ### Casos Avanzados de Feature Envy
 
-#### Caso 1: Envidia de Múltiples Clases
+#### Caso 1. Envidia de Múltiples Clases
 
 ```java
 // ❌ Envidia de Customer y Order

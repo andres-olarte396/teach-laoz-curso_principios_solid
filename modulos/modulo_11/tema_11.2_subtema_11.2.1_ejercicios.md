@@ -1,6 +1,6 @@
 # Ejercicios: Contratos de Servicio y LSP
 
-## ⭐ Ejercicio 1: Detectar Violaciones LSP en APIs
+## ⭐ Ejercicio 1. Detectar Violaciones LSP en APIs
 
 Analiza las siguientes evoluciones de API e identifica cuáles violan LSP:
 

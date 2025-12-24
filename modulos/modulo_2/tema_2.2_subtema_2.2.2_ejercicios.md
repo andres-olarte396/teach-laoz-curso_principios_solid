@@ -1,6 +1,6 @@
 # Ejercicios: Acoplamiento y Cohesión
 
-## ⭐ Nivel 1: Cálculo de Métricas
+## ⭐ Nivel 1. Cálculo de Métricas
 
 Calcula LCOM4, Ce, Ca para estas clases. Identifica si cumplen SRP.
 

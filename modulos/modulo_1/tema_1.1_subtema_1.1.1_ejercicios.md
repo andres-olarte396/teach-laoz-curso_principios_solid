@@ -2,9 +2,9 @@
 
 ## BANCO DE EJERCICIOS GRADUADOS
 
-### ⭐ NIVEL 1: Identificación de Violaciones
+### ⭐ NIVEL 1. Identificación de Violaciones
 
-#### Ejercicio 1.1: Detectar Responsabilidades Múltiples
+#### Ejercicio 1.1. Detectar Responsabilidades Múltiples
 
 **Enunciado:**
 Analiza la siguiente clase e identifica todas las responsabilidades que tiene. Para cada responsabilidad, indica qué actor/stakeholder podría requerir cambios.
@@ -287,7 +287,7 @@ public class ReportGenerator {
 
 ### ⭐⭐ NIVEL 2: Refactorización Guiada
 
-#### Ejercicio 2.1: Refactorizar Sistema de Biblioteca
+#### Ejercicio 2.1. Refactorizar Sistema de Biblioteca
 
 **Enunciado:**
 Refactoriza la siguiente clase que gestiona libros en una biblioteca para cumplir con SRP:
@@ -635,7 +635,7 @@ class CheckoutServiceTest {
 
 ### ⭐⭐⭐ NIVEL 3: Diseño desde Cero
 
-#### Ejercicio 3.1: Sistema de Gestión de Pedidos
+#### Ejercicio 3.1. Sistema de Gestión de Pedidos
 
 **Enunciado:**
 Diseña desde cero un sistema de gestión de pedidos para un e-commerce que cumpla con SRP. El sistema debe manejar:
@@ -857,7 +857,7 @@ public class OrderProcessingService {
 
 ### ⭐⭐⭐⭐ NIVEL 4: Proyecto Arquitectónico
 
-#### Ejercicio 4.1: Sistema de Gestión Hospitalaria
+#### Ejercicio 4.1. Sistema de Gestión Hospitalaria
 
 Diseña e implementa un sistema hospitalario completo con:
 - Gestión de pacientes y expedientes médicos

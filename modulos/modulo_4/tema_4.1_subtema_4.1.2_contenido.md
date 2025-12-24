@@ -6,7 +6,7 @@
 
 **Violación LSP**: Si un cliente usa el tipo base, no debe fallar al sustituirlo por un subtipo.
 
-## Ejemplo 1: Validación más Estricta
+## Ejemplo 1. Validación más Estricta
 
 ```java
 class FileProcessor {

@@ -1,6 +1,6 @@
 # Ejercicios: Shared Libraries y DIP
 
-## ⭐ Ejercicio 1: Identificar Violaciones DIP en Shared Library
+## ⭐ Ejercicio 1. Identificar Violaciones DIP en Shared Library
 
 Analiza esta shared library y encuentra violaciones de DIP:
 

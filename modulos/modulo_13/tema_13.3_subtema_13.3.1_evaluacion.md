@@ -5,7 +5,7 @@
 
 ---
 
-## Parte 1: Preguntas Teóricas (20 puntos)
+## Parte 1. Preguntas Teóricas (20 puntos)
 
 ### Pregunta 1 (5 puntos)
 
@@ -626,7 +626,7 @@ istioctl dashboard kiali
 
 | Sección                        | Puntos | Criterios                                          |
 | ------------------------------ | ------ | -------------------------------------------------- |
-| Parte 1: Teoría                | 20     | Comprensión de serverless y service mesh           |
+| Parte 1. Teoría                | 20     | Comprensión de serverless y service mesh           |
 | Parte 2: Lambda API            | 40     | API funcional, DynamoDB, SNS, deployment           |
 | Parte 3: Istio                 | 40     | Canary deployment, circuit breaker, mTLS           |
 | **Total**                      | **100** |                                                   |

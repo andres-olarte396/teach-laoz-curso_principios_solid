@@ -32,7 +32,7 @@ Vamos a ver cada factor en detalle y cómo aplicarlo con ejemplos prácticos.
 
 **[Pantalla: Factor 1 - Codebase]**
 
-### Factor 1: Un repositorio, múltiples deploys
+### Factor 1. Un repositorio, múltiples deploys
 
 **[Visual: Diagrama de un repo con múltiples branches]**
 
@@ -273,7 +273,7 @@ t=6s:  Process exits cleanly ✅
 
 ---
 
-## [15:00 - 18:00] Factor 11: Logs (Structured Logging)
+## [15:00 - 18:00] Factor 11. Logs (Structured Logging)
 
 **[Pantalla: Factor 11 - Logs]**
 
@@ -398,7 +398,7 @@ Ahora veamos cómo Docker implementa varios de estos factores.
 **[Mostrar código: Dockerfile multi-stage]**
 
 ```dockerfile
-# STAGE 1: Build
+# STAGE 1. Build
 FROM node:18 AS builder
 WORKDIR /app
 COPY package*.json ./

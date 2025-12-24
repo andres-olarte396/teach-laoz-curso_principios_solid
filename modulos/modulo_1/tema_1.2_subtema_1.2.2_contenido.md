@@ -46,7 +46,7 @@ public class UserService {
 void testRegisterUser() {
     UserService service = new UserService();
     
-    // ❌ Problema 1: Necesitas BD MySQL corriendo
+    // ❌ Problema 1. Necesitas BD MySQL corriendo
     // ❌ Problema 2: Necesitas servidor SMTP
     // ❌ Problema 3: No puedes verificar hash sin lógica acoplada
     // ❌ Problema 4: Test lento (red, BD, bcrypt)

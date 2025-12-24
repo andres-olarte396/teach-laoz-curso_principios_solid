@@ -1,6 +1,6 @@
 # Evaluación: Event Sourcing y CQRS
 
-## Parte 1: Preguntas Conceptuales (25 puntos)
+## Parte 1. Preguntas Conceptuales (25 puntos)
 
 ### Pregunta 1 (8 puntos)
 Explica cómo Event Sourcing difiere de persistencia tradicional. ¿Cuáles son las ventajas y desventajas?

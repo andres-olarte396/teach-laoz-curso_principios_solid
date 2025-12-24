@@ -1,6 +1,6 @@
 # Ejercicios: Events vs Messages
 
-## ⭐ Ejercicio 1: Identificar Commands vs Events
+## ⭐ Ejercicio 1. Identificar Commands vs Events
 
 Clasifica los siguientes mensajes como Command o Event:
 

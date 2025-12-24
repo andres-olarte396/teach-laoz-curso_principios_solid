@@ -5,7 +5,7 @@
 
 ---
 
-## Parte 1: Preguntas Teóricas (20 puntos)
+## Parte 1. Preguntas Teóricas (20 puntos)
 
 ### Pregunta 1 (5 puntos)
 
@@ -624,7 +624,7 @@ Product Service (50ms)
 
 | Sección                        | Puntos | Criterios                                          |
 | ------------------------------ | ------ | -------------------------------------------------- |
-| Parte 1: Teoría                | 20     | Comprensión de pilares y métricas                  |
+| Parte 1. Teoría                | 20     | Comprensión de pilares y métricas                  |
 | Parte 2: PromQL                | 25     | Queries correctos                                  |
 | Parte 3: Implementación        | 55     | Microservicios, instrumentación, deployment        |
 | **Total**                      | **100** |                                                   |

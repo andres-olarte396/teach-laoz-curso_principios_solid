@@ -260,7 +260,7 @@ El read side tiene TODO denormalizado. Customer name, email, item count... todo 
 ```typescript
 // Mismo evento, 3 read models diferentes
 
-// Read Model 1: Para UI (lista básica)
+// Read Model 1. Para UI (lista básica)
 interface OrderListView {
     orderId: string;
     customerName: string;
@@ -353,7 +353,7 @@ const eventStore = new PostgresEventStore({
     // ACID transactions
 });
 
-// Read Side 1: MongoDB (documentos denormalizados)
+// Read Side 1. MongoDB (documentos denormalizados)
 const orderViewStore = new MongoDBStore({
     host: 'read-db-mongo.example.com',
     database: 'order_views'

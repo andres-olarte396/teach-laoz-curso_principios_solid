@@ -10,7 +10,7 @@ Deberás migrar una aplicación monolítica legacy a una arquitectura cloud-nati
 
 ---
 
-## Parte 1: Preguntas Teóricas (20 puntos)
+## Parte 1. Preguntas Teóricas (20 puntos)
 
 ### Pregunta 1 (5 puntos)
 
@@ -237,7 +237,7 @@ Tu empresa tiene una aplicación de gestión de tareas (TODO app) que actualment
 - Logs: Archivo `/var/log/todoapp.log`
 - Config: Hardcoded en `config.py`
 
-### Tarea 3.1: Dockerfile Multi-Stage (15 puntos)
+### Tarea 3.1. Dockerfile Multi-Stage (15 puntos)
 
 Crea un Dockerfile multi-stage optimizado para la aplicación Python Flask.
 
@@ -424,7 +424,7 @@ Crea manifiestos de Kubernetes para deploy en producción.
 
 ## Parte 4: Bonus (10 puntos extra)
 
-### Bonus 1: Observabilidad (5 puntos)
+### Bonus 1. Observabilidad (5 puntos)
 
 Implementa métricas Prometheus en la aplicación Flask. Incluye:
 
@@ -448,7 +448,7 @@ Crea un GitHub Actions workflow que:
 
 | Sección | Puntos | Descripción |
 |---------|--------|-------------|
-| **Parte 1: Teoría** | 20 | Comprensión de conceptos 12-Factor |
+| **Parte 1. Teoría** | 20 | Comprensión de conceptos 12-Factor |
 | Pregunta 1 | 5 | Factor 6 (Processes) |
 | Pregunta 2 | 5 | Factor 11 (Logs) |
 | Pregunta 3 | 5 | Factor 10 (Dev/Prod Parity) |
@@ -510,7 +510,7 @@ class Config:
 
 config = Config()
 
-# ===== Factor 11: Structured logging to stdout =====
+# ===== Factor 11. Structured logging to stdout =====
 class JSONFormatter(logging.Formatter):
     def format(self, record):
         log_data = {

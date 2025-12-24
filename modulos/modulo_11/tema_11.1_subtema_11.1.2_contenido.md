@@ -281,7 +281,7 @@ class ProductApiV1(ApiVersion):
         return version == "1.0" or version == "1"
     
     async def handle(self, request):
-        # V1: Basic product info
+        # V1. Basic product info
         product = await self.product_service.get_product(request.product_id)
         return {
             "id": product.id,

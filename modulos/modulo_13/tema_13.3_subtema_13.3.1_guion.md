@@ -99,7 +99,7 @@ curl https://abc123.execute-api.us-east-1.amazonaws.com/Prod/hello?name=Alice
 
 ## [06:00-12:00] Patrones Serverless
 
-### Patrón 1: API Backend (CRUD)
+### Patrón 1. API Backend (CRUD)
 
 ```
 Client → API Gateway → Lambda → DynamoDB

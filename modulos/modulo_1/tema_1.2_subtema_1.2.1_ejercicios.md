@@ -1,8 +1,8 @@
 # Ejercicios: Casos de Estudio de SRP en Sistemas Reales
 
-## Nivel 1: Análisis de Código Real ⭐
+## Nivel 1. Análisis de Código Real ⭐
 
-### Ejercicio 1.1: Identificar Violaciones en Código Legacy
+### Ejercicio 1.1. Identificar Violaciones en Código Legacy
 
 Analiza el siguiente fragmento inspirado en un sistema bancario real y responde:
 
@@ -169,7 +169,7 @@ AuthenticationService (150 LOC) [orquestador]
 
 ## Nivel 2: Refactorización Guiada ⭐⭐
 
-### Ejercicio 2.1: Refactorizar Sistema de Notificaciones
+### Ejercicio 2.1. Refactorizar Sistema de Notificaciones
 
 Dado este sistema de notificaciones que viola SRP, refactorízalo:
 
@@ -583,7 +583,7 @@ class NotificationServiceTest {
 
 ## Nivel 3: Diseño de Arquitectura ⭐⭐⭐
 
-### Ejercicio 3.1: Sistema de Procesamiento de Pagos
+### Ejercicio 3.1. Sistema de Procesamiento de Pagos
 
 Diseña un sistema de procesamiento de pagos que soporte múltiples gateways (Stripe, PayPal, Square) y cumpla con SRP.
 
@@ -606,7 +606,7 @@ Diseña un sistema de procesamiento de pagos que soporte múltiples gateways (St
 
 ## Nivel 4: Análisis de Open Source ⭐⭐⭐⭐
 
-### Ejercicio 4.1: Análisis de Spring Security
+### Ejercicio 4.1. Análisis de Spring Security
 
 Investiga la arquitectura de Spring Security y documenta:
 

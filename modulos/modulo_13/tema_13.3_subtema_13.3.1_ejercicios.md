@@ -1,6 +1,6 @@
 # Ejercicios: Serverless y Service Mesh
 
-## ⭐ Ejercicio 1: AWS Lambda Function Simple
+## ⭐ Ejercicio 1. AWS Lambda Function Simple
 
 **Objetivo**: Crear una función Lambda que procese eventos HTTP y se conecte a DynamoDB.
 

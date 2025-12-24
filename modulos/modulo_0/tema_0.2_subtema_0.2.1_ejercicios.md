@@ -2,9 +2,9 @@
 
 ## BANCO DE EJERCICIOS GRADUADOS
 
-### ⭐ NIVEL 1: Conceptuales (Comprensión)
+### ⭐ NIVEL 1. Conceptuales (Comprensión)
 
-#### Ejercicio 1.1: Identificar Tests Deficientes
+#### Ejercicio 1.1. Identificar Tests Deficientes
 
 **Enunciado:**
 Analiza los siguientes tests e identifica qué tienen de malo:
@@ -163,7 +163,7 @@ void agregarProductosDebeCalcularTotalCorrectamente() {
 
 ### ⭐⭐ NIVEL 2: Prácticos (Implementación)
 
-#### Ejercicio 2.1: Test Suite Completo para Calculator
+#### Ejercicio 2.1. Test Suite Completo para Calculator
 
 **Enunciado:**
 Implementa una clase `Calculator` con operaciones básicas y escribe una suite completa de tests que cubra:
@@ -464,7 +464,7 @@ mvn test
 
 ### ⭐⭐⭐ NIVEL 3: Desafíos (TDD y Diseño)
 
-#### Ejercicio 3.1: Shopping Cart con TDD
+#### Ejercicio 3.1. Shopping Cart con TDD
 
 **Enunciado:**
 Desarrolla un carrito de compras siguiendo TDD (Test-Driven Development):
@@ -484,7 +484,7 @@ Desarrolla un carrito de compras siguiendo TDD (Test-Driven Development):
 **Solución Modelo (TDD completo):**
 
 ```java
-// ITERACIÓN 1: Test para agregar producto
+// ITERACIÓN 1. Test para agregar producto
 @Test
 void carritoVacioTieneTotalCero() {
     CarritoCompras carrito = new CarritoCompras();
@@ -693,7 +693,7 @@ class CarritoComprasTest {
 
 ### ⭐⭐⭐⭐ NIVEL 4: Proyecto Profesional
 
-#### Ejercicio 4.1: Sistema de Reservas de Hotel con Tests Completos
+#### Ejercicio 4.1. Sistema de Reservas de Hotel con Tests Completos
 
 Desarrolla un sistema completo de reservas con:
 - Gestión de habitaciones (tipos, precios, disponibilidad)

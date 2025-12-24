@@ -5,9 +5,9 @@ Practicar la identificación de responsabilidades en clases existentes y aplicar
 
 ---
 
-## ⭐ Nivel 1: Identificación de Responsabilidades
+## ⭐ Nivel 1. Identificación de Responsabilidades
 
-### Ejercicio 1.1: Análisis de Clase Report
+### Ejercicio 1.1. Análisis de Clase Report
 
 Analiza la siguiente clase y responde las preguntas:
 
@@ -132,7 +132,7 @@ public class Customer {
 
 ## ⭐⭐ Nivel 2: Refactorización Básica
 
-### Ejercicio 2.1: Separar Responsabilidades en OrderProcessor
+### Ejercicio 2.1. Separar Responsabilidades en OrderProcessor
 
 Refactoriza la siguiente clase aplicando SRP:
 
@@ -487,7 +487,7 @@ public class DiscountCalculatorTest {
 
 ## ⭐⭐⭐ Nivel 3: Diseño desde Cero
 
-### Ejercicio 3.1: Sistema de Gestión de Tareas
+### Ejercicio 3.1. Sistema de Gestión de Tareas
 
 Diseña un sistema de gestión de tareas (TODO list) aplicando SRP desde el inicio.
 
@@ -926,7 +926,7 @@ public class CsvTaskExporterTest {
 
 ## ⭐⭐⭐⭐ Nivel 4: Análisis de Arquitectura Real
 
-### Ejercicio 4.1: Auditoría de Código Legacy
+### Ejercicio 4.1. Auditoría de Código Legacy
 
 Se te proporciona un fragmento de un sistema de comercio electrónico legacy:
 

@@ -2,9 +2,9 @@
 
 ## BANCO DE EJERCICIOS GRADUADOS
 
-### ⭐ NIVEL 1: Conceptuales (Comprensión)
+### ⭐ NIVEL 1. Conceptuales (Comprensión)
 
-#### Ejercicio 1.1: Identificación de Violaciones de Encapsulación
+#### Ejercicio 1.1. Identificación de Violaciones de Encapsulación
 
 **Enunciado:**
 Analiza el siguiente código y identifica todas las violaciones del principio de encapsulación:
@@ -224,7 +224,7 @@ public class Checkout {
 
 ### ⭐⭐ NIVEL 2: Prácticos (Implementación)
 
-#### Ejercicio 2.1: Sistema de Reservas de Hotel
+#### Ejercicio 2.1. Sistema de Reservas de Hotel
 
 **Enunciado:**
 Implementa una clase `Habitacion` para un sistema de reservas de hotel con las siguientes especificaciones:
@@ -417,7 +417,7 @@ class HabitacionTest {
 
 ### ⭐⭐⭐ NIVEL 3: Desafíos (Optimización)
 
-#### Ejercicio 3.1: Sistema de Versionado de Documentos
+#### Ejercicio 3.1. Sistema de Versionado de Documentos
 
 **Enunciado:**
 Diseña e implementa un sistema de versionado de documentos que cumpla con:
@@ -619,7 +619,7 @@ class DocumentoTest {
 
 ### ⭐⭐⭐⭐ NIVEL 4: Proyectos Integradores
 
-#### Ejercicio 4.1: Sistema Bancario Completo
+#### Ejercicio 4.1. Sistema Bancario Completo
 
 **Enunciado:**
 Diseña un sistema bancario que incluya:
@@ -651,7 +651,7 @@ Esta solución requiere aproximadamente 500-700 líneas de código con encapsula
 
 ## DIAGNÓSTICO DE ERRORES COMUNES
 
-### Error 1: Exposición Innecesaria de Estado
+### Error 1. Exposición Innecesaria de Estado
 
 ```java
 // ❌ INCORRECTO

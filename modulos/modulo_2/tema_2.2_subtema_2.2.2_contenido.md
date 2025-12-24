@@ -146,7 +146,7 @@ public class UserService {
     private FileStorage storage;
     private Analytics analytics;
     
-    // Grupo 1: Autenticación (usa db, emailService)
+    // Grupo 1. Autenticación (usa db, emailService)
     public void register(User user) { /* ... */ }
     public void login(String email, String password) { /* ... */ }
     

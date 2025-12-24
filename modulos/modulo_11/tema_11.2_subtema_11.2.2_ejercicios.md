@@ -1,6 +1,6 @@
 # Ejercicios: Service Mesh y DIP
 
-## ⭐ Ejercicio 1: Migrar de Library a Service Mesh
+## ⭐ Ejercicio 1. Migrar de Library a Service Mesh
 
 Tienes este código con Resilience4j:
 

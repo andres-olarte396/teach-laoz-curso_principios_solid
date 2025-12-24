@@ -21,7 +21,7 @@ Este curso de **170 horas** cubre exhaustivamente los 5 principios SOLID de dise
 - Fundamentos de POO (Clases, Objetos, Herencia, Polimorfismo)
 - Testing y Diseño (Unit Testing, Patrones básicos)
 
-### Módulo 1: Introducción a SOLID (8 horas)
+### Módulo 1. Introducción a SOLID (8 horas)
 ✅ **Temas**: 2 | **Subtemas**: 4 | **Archivos**: 8
 - Historia y Contexto (Origen SOLID, Software Legacy)
 - Visión General de SOLID (5 Principios, Beneficios)
@@ -148,7 +148,7 @@ Este curso de **170 horas** cubre exhaustivamente los 5 principios SOLID de dise
 
 ## 📝 Tipos de Ejercicios por Nivel
 
-### ⭐ Nivel 1: Conceptual
+### ⭐ Nivel 1. Conceptual
 - Identificación de violaciones
 - Quiz teóricos
 - Análisis de código dado

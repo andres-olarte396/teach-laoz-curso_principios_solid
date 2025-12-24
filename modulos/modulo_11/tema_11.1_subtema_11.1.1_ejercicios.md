@@ -1,6 +1,6 @@
 # Ejercicios: Bounded Contexts y SRP
 
-## ⭐ Ejercicio 1: Identificación de Bounded Contexts
+## ⭐ Ejercicio 1. Identificación de Bounded Contexts
 
 **Contexto**: Tienes un sistema monolítico de gestión universitaria con las siguientes funcionalidades:
 

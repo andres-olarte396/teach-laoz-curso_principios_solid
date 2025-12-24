@@ -318,7 +318,7 @@ public class FulfillmentOrder
 ### Strangler Fig Pattern
 
 ```java
-// Fase 1: Monolito original
+// Fase 1. Monolito original
 public class OrderController {
     @PostMapping("/orders")
     public OrderResponse createOrder(@RequestBody OrderRequest request) {

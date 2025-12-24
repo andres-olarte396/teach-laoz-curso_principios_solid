@@ -214,14 +214,14 @@ eventBus.subscribe(OrderPlacedEvent.class, event -> {
 
 // Baja prioridad: analytics
 eventBus.subscribe(OrderPlacedEvent.class, event -> {
-    System.out.println("PRIORITY 1: Analytics");
+    System.out.println("PRIORITY 1. Analytics");
 }, 1);
 
 eventBus.publish(new OrderPlacedEvent(order));
 // Output (en orden de prioridad):
 // PRIORITY 10: Validation
 // PRIORITY 5: Email
-// PRIORITY 1: Analytics
+// PRIORITY 1. Analytics
 ```
 
 ## Eventos con Filtrado

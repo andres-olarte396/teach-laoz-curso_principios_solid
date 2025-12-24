@@ -1,4 +1,4 @@
-# Subtema 1.1.1: Definición y Fundamentos del SRP
+# Subtema 1.1.1. Definición y Fundamentos del SRP
 
 ## 1. Contexto y Motivación
 
@@ -25,7 +25,7 @@ Una **responsabilidad** es una razón para cambiar. En términos más concretos:
 ```java
 // ❌ VIOLA SRP: Esta clase tiene 3 responsabilidades (3 razones para cambiar)
 public class Employee {
-    // Responsabilidad 1: Lógica de negocio (CFO puede pedir cambios)
+    // Responsabilidad 1. Lógica de negocio (CFO puede pedir cambios)
     public double calculatePay() {
         // Cálculo de salario
     }
@@ -84,7 +84,7 @@ public class User {
     private String password;
     private String email;
     
-    // Responsabilidad 1: Validación de datos
+    // Responsabilidad 1. Validación de datos
     public boolean isValidEmail() {
         return email.matches("^[A-Za-z0-9+_.-]+@(.+)$");
     }

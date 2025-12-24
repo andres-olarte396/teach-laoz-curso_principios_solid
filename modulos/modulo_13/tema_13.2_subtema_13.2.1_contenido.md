@@ -237,7 +237,7 @@ Estado inicial: 3 pods con nginx:1.25
 ├─ Pod 2 (v1.25)
 └─ Pod 3 (v1.25)
 
-Paso 1: Crear 1 nuevo pod con v1.26 (maxSurge=1)
+Paso 1. Crear 1 nuevo pod con v1.26 (maxSurge=1)
 ├─ Pod 1 (v1.25)
 ├─ Pod 2 (v1.25)
 ├─ Pod 3 (v1.25)

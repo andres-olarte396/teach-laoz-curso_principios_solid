@@ -1,6 +1,6 @@
 # Evaluación: Events vs Commands vs Queries
 
-## Parte 1: Preguntas Teóricas (30 puntos)
+## Parte 1. Preguntas Teóricas (30 puntos)
 
 ### Pregunta 1 (10 puntos)
 Explica la diferencia fundamental entre un Command y un Event. Proporciona un ejemplo de cada uno en el contexto de un sistema de reservas de vuelos.

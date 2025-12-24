@@ -13,7 +13,7 @@ Número de clases externas de las que depende esta clase.
 I = Ce / (Ca + Ce)
 ```
 - I = 0: Muy estable (muchas dependencias entrantes)
-- I = 1: Muy inestable (muchas dependencias salientes)
+- I = 1. Muy inestable (muchas dependencias salientes)
 
 ## Métricas de Cohesión
 

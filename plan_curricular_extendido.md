@@ -15,7 +15,7 @@
 
 ## VISIÓN GENERAL DEL PROGRAMA COMPLETO
 
-### Fase 1: Fundamentos SOLID (COMPLETA ✅)
+### Fase 1. Fundamentos SOLID (COMPLETA ✅)
 **Duración**: 170 horas | **Módulos**: 0-10
 - Principios SOLID fundamentales
 - Patrones de diseño básicos
@@ -47,13 +47,13 @@
 
 ## FASE 2: SOLID EN ARQUITECTURAS MODERNAS (60 HORAS)
 
-### MÓDULO 11: SOLID y Microservicios (20 horas)
+### MÓDULO 11. SOLID y Microservicios (20 horas)
 
 **Objetivo**: Aplicar principios SOLID en arquitecturas de microservicios
 
-#### TEMA 11.1: Diseño de Microservicios con SOLID
+#### TEMA 11.1. Diseño de Microservicios con SOLID
 
-##### Subtema 11.1.1: Bounded Contexts y SRP
+##### Subtema 11.1.1. Bounded Contexts y SRP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Domain-Driven Design y SOLID
 - Identificación de bounded contexts
@@ -71,7 +71,7 @@
 
 #### TEMA 11.2: Comunicación entre Microservicios
 
-##### Subtema 11.2.1: Contratos y LSP
+##### Subtema 11.2.1. Contratos y LSP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Consumer-Driven Contracts
 - OpenAPI/Swagger y design-by-contract
@@ -89,7 +89,7 @@
 
 #### TEMA 11.3: Data Management en Microservicios
 
-##### Subtema 11.3.1: Database per Service y SRP
+##### Subtema 11.3.1. Database per Service y SRP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Database per service pattern
 - Polyglot persistence
@@ -107,7 +107,7 @@
 
 #### TEMA 11.4: Proyecto Integrador: E-commerce Distribuido
 
-##### Subtema 11.4.1: Arquitectura de Microservicios
+##### Subtema 11.4.1. Arquitectura de Microservicios
 **Duración**: 5 horas | **Tipo**: Proyecto
 - **Servicios**: Catalog, Cart, Order, Payment, Shipping, User
 - API Gateway con Spring Cloud Gateway / Ocelot
@@ -121,9 +121,9 @@
 
 **Objetivo**: Diseñar sistemas event-driven aplicando principios SOLID
 
-#### TEMA 12.1: Fundamentos de Event-Driven Architecture
+#### TEMA 12.1. Fundamentos de Event-Driven Architecture
 
-##### Subtema 12.1.1: Events vs Commands y SRP
+##### Subtema 12.1.1. Events vs Commands y SRP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Diferencia entre eventos y comandos
 - Event naming conventions
@@ -141,7 +141,7 @@
 
 #### TEMA 12.2: Event Sourcing
 
-##### Subtema 12.2.1: Event Store y SRP
+##### Subtema 12.2.1. Event Store y SRP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Event sourcing pattern
 - Event store design
@@ -159,7 +159,7 @@
 
 #### TEMA 12.3: Saga Patterns
 
-##### Subtema 12.3.1: Choreography vs Orchestration
+##### Subtema 12.3.1. Choreography vs Orchestration
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Saga choreography pattern
 - Saga orchestration pattern
@@ -177,7 +177,7 @@
 
 #### TEMA 12.4: Proyecto Integrador: Sistema de Reservas
 
-##### Subtema 12.4.1: Plataforma Event-Driven
+##### Subtema 12.4.1. Plataforma Event-Driven
 **Duración**: 5 horas | **Tipo**: Proyecto
 - **Contextos**: Flight, Hotel, Car Rental, Payment
 - Event sourcing + CQRS
@@ -191,9 +191,9 @@
 
 **Objetivo**: Aplicar SOLID en arquitecturas cloud-native
 
-#### TEMA 13.1: 12-Factor App y SOLID
+#### TEMA 13.1. 12-Factor App y SOLID
 
-##### Subtema 13.1.1: Configuration y DIP
+##### Subtema 13.1.1. Configuration y DIP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Externalized configuration
 - Config servers (Spring Cloud Config, Azure App Configuration)
@@ -211,7 +211,7 @@
 
 #### TEMA 13.2: Containerización y SOLID
 
-##### Subtema 13.2.1: Docker Multi-stage Builds y SRP
+##### Subtema 13.2.1. Docker Multi-stage Builds y SRP
 **Duración**: 2.5 horas | **Tipo**: Práctico
 - Multi-stage builds
 - Layer optimization
@@ -229,7 +229,7 @@
 
 #### TEMA 13.3: Serverless y SOLID
 
-##### Subtema 13.3.1: Function as a Service y SRP
+##### Subtema 13.3.1. Function as a Service y SRP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - AWS Lambda / Azure Functions / Google Cloud Functions
 - Cold start optimization
@@ -247,7 +247,7 @@
 
 #### TEMA 13.4: Proyecto Integrador: Plataforma Multi-Cloud
 
-##### Subtema 13.4.1: Hybrid Cloud Architecture
+##### Subtema 13.4.1. Hybrid Cloud Architecture
 **Duración**: 5 horas | **Tipo**: Proyecto
 - **Componentes**: AWS + Azure + GCP
 - Terraform para IaC
@@ -263,9 +263,9 @@
 
 **Objetivo**: Balancear principios SOLID con requisitos de performance
 
-#### TEMA 14.1: Performance vs Design Principles
+#### TEMA 14.1. Performance vs Design Principles
 
-##### Subtema 14.1.1: Measuring Performance Impact
+##### Subtema 14.1.1. Measuring Performance Impact
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Benchmarking (JMH, BenchmarkDotNet)
 - Profiling (JProfiler, dotTrace, py-spy)
@@ -283,7 +283,7 @@
 
 #### TEMA 14.2: Database Optimization
 
-##### Subtema 14.2.1: Repository Pattern Optimization
+##### Subtema 14.2.1. Repository Pattern Optimization
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - N+1 query problem
 - Eager vs Lazy loading
@@ -301,7 +301,7 @@
 
 #### TEMA 14.3: Memory Management
 
-##### Subtema 14.3.1: Object Pooling y OCP
+##### Subtema 14.3.1. Object Pooling y OCP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Object pool pattern
 - Connection pooling
@@ -319,7 +319,7 @@
 
 #### TEMA 14.4: Proyecto Integrador: Sistema de Alta Carga
 
-##### Subtema 14.4.1: High-Performance API
+##### Subtema 14.4.1. High-Performance API
 **Duración**: 5 horas | **Tipo**: Proyecto
 - **Requisito**: 10,000+ requests/sec
 - Caching estratégico
@@ -333,9 +333,9 @@
 
 **Objetivo**: Aplicar SOLID en sistemas concurrentes y paralelos
 
-#### TEMA 15.1: Thread Safety y SOLID
+#### TEMA 15.1. Thread Safety y SOLID
 
-##### Subtema 15.1.1: Immutable Objects y LSP
+##### Subtema 15.1.1. Immutable Objects y LSP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Thread-safe by design
 - Immutability patterns
@@ -353,7 +353,7 @@
 
 #### TEMA 15.2: Async/Await Patterns
 
-##### Subtema 15.2.1: Async Design y DIP
+##### Subtema 15.2.1. Async Design y DIP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - CompletableFuture (Java)
 - Task (C#)
@@ -371,7 +371,7 @@
 
 #### TEMA 15.3: Actor Model
 
-##### Subtema 15.3.1: Akka/Orleans y SRP
+##### Subtema 15.3.1. Akka/Orleans y SRP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Actor model fundamentals
 - Message passing
@@ -389,7 +389,7 @@
 
 #### TEMA 15.4: Proyecto Integrador: Sistema de Trading
 
-##### Subtema 15.4.1: High-Frequency Trading Platform
+##### Subtema 15.4.1. High-Frequency Trading Platform
 **Duración**: 5 horas | **Tipo**: Proyecto
 - **Requisito**: Latencia < 10ms
 - Lock-free queues
@@ -403,9 +403,9 @@
 
 **Objetivo**: Diseñar sistemas de alto rendimiento con SOLID
 
-#### TEMA 16.1: Distributed Systems Patterns
+#### TEMA 16.1. Distributed Systems Patterns
 
-##### Subtema 16.1.1: CAP Theorem y Design Decisions
+##### Subtema 16.1.1. CAP Theorem y Design Decisions
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Consistency vs Availability
 - Partition tolerance
@@ -423,7 +423,7 @@
 
 #### TEMA 16.2: Load Balancing y Scaling
 
-##### Subtema 16.2.1: Horizontal Scaling y SRP
+##### Subtema 16.2.1. Horizontal Scaling y SRP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Stateless services
 - Sticky sessions
@@ -441,7 +441,7 @@
 
 #### TEMA 16.3: Monitoring y Observability
 
-##### Subtema 16.3.1: Metrics y Distributed Tracing
+##### Subtema 16.3.1. Metrics y Distributed Tracing
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Prometheus + Grafana
 - OpenTelemetry
@@ -459,7 +459,7 @@
 
 #### TEMA 16.4: Proyecto Integrador: Plataforma de Streaming
 
-##### Subtema 16.4.1: Video Streaming Platform
+##### Subtema 16.4.1. Video Streaming Platform
 **Duración**: 5 horas | **Tipo**: Proyecto
 - **Requisito**: 100,000+ concurrent users
 - CDN integration
@@ -475,9 +475,9 @@
 
 **Objetivo**: Integrar principios SOLID en prácticas DevOps
 
-#### TEMA 17.1: Infrastructure as Code
+#### TEMA 17.1. Infrastructure as Code
 
-##### Subtema 17.1.1: Terraform Modules y SRP
+##### Subtema 17.1.1. Terraform Modules y SRP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Module composition
 - DRY en IaC
@@ -495,7 +495,7 @@
 
 #### TEMA 17.2: CI/CD Pipeline Design
 
-##### Subtema 17.2.1: Pipeline as Code y OCP
+##### Subtema 17.2.1. Pipeline as Code y OCP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Jenkins/GitHub Actions/Azure DevOps
 - Pipeline templates
@@ -513,7 +513,7 @@
 
 #### TEMA 17.3: Testing en CI/CD
 
-##### Subtema 17.3.1: Test Pyramid y Automation
+##### Subtema 17.3.1. Test Pyramid y Automation
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Unit → Integration → E2E → Performance
 - Test parallelization
@@ -531,7 +531,7 @@
 
 #### TEMA 17.4: Proyecto Integrador: DevOps Platform
 
-##### Subtema 17.4.1: Complete DevOps Toolchain
+##### Subtema 17.4.1. Complete DevOps Toolchain
 **Duración**: 5 horas | **Tipo**: Proyecto
 - **Componentes**: Git → Build → Test → Deploy → Monitor
 - Multi-environment pipeline
@@ -545,9 +545,9 @@
 
 **Objetivo**: Aplicar SOLID considerando seguridad y compliance
 
-#### TEMA 18.1: Secure Design Principles
+#### TEMA 18.1. Secure Design Principles
 
-##### Subtema 18.1.1: Defense in Depth y SRP
+##### Subtema 18.1.1. Defense in Depth y SRP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Security layers
 - Principle of least privilege
@@ -565,7 +565,7 @@
 
 #### TEMA 18.2: Authentication y Authorization
 
-##### Subtema 18.2.1: OAuth2/OpenID Connect y ISP
+##### Subtema 18.2.1. OAuth2/OpenID Connect y ISP
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Grant types
 - JWT tokens
@@ -583,7 +583,7 @@
 
 #### TEMA 18.3: Compliance y Auditability
 
-##### Subtema 18.3.1: GDPR/HIPAA Compliance
+##### Subtema 18.3.1. GDPR/HIPAA Compliance
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Data privacy by design
 - Audit logging
@@ -601,7 +601,7 @@
 
 #### TEMA 18.4: Proyecto Integrador: Healthcare Platform
 
-##### Subtema 18.4.1: HIPAA-Compliant System
+##### Subtema 18.4.1. HIPAA-Compliant System
 **Duración**: 5 horas | **Tipo**: Proyecto
 - **Requisito**: HIPAA compliance
 - End-to-end encryption
@@ -615,9 +615,9 @@
 
 **Objetivo**: Liderar implementación de SOLID en entornos empresariales
 
-#### TEMA 19.1: Technical Leadership
+#### TEMA 19.1. Technical Leadership
 
-##### Subtema 19.1.1: Architectural Decision Records
+##### Subtema 19.1.1. Architectural Decision Records
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - ADR templates
 - Decision-making frameworks
@@ -635,7 +635,7 @@
 
 #### TEMA 19.2: Migration Strategies
 
-##### Subtema 19.2.1: Strangler Fig Pattern
+##### Subtema 19.2.1. Strangler Fig Pattern
 **Duración**: 2.5 horas | **Tipo**: Teórico-Práctico
 - Incremental migration
 - Feature parity
@@ -653,7 +653,7 @@
 
 #### TEMA 19.3: Proyecto Capstone Empresarial
 
-##### Subtema 19.3.1: Sistema Bancario Core
+##### Subtema 19.3.1. Sistema Bancario Core
 **Duración**: 10 horas | **Tipo**: Proyecto Final
 **Requisitos completos**:
 - Arquitectura multi-región (3+ clouds)
@@ -742,9 +742,9 @@
 
 ## ROADMAP DE IMPLEMENTACIÓN
 
-### Prioridad 1: Fase 2 (Inmediata)
+### Prioridad 1. Fase 2 (Inmediata)
 **Justificación**: Microservicios es la arquitectura más demandada actualmente
-- Módulo 11: SOLID y Microservicios
+- Módulo 11. SOLID y Microservicios
 - Módulo 12: Event-Driven Architecture
 - Módulo 13: Cloud-Native Patterns
 

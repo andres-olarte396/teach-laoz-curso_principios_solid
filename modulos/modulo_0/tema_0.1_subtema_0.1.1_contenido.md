@@ -1,4 +1,4 @@
-# Subtema 0.1.1: Repaso de Clases, Objetos y Encapsulación
+# Subtema 0.1.1. Repaso de Clases, Objetos y Encapsulación
 
 ## 1. Contexto y Motivación
 

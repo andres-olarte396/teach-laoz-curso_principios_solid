@@ -444,7 +444,7 @@ app.listen(8080);
 ```
 Trace ID: abc123 (total: 450ms)
     ↓
-Span 1: GET /api/orders/123 (frontend-service) - 450ms
+Span 1. GET /api/orders/123 (frontend-service) - 450ms
     ↓
 Span 2: GET /check/123 (inventory-service) - 80ms
     ↓

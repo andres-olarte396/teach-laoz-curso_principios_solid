@@ -2,9 +2,9 @@
 
 ## BANCO DE EJERCICIOS GRADUADOS
 
-### ⭐ NIVEL 1: Conceptuales (Identificación)
+### ⭐ NIVEL 1. Conceptuales (Identificación)
 
-#### Ejercicio 1.1: Identificar Patrones en Código
+#### Ejercicio 1.1. Identificar Patrones en Código
 
 **Enunciado:**
 Identifica qué patrón de diseño se está usando en cada fragmento de código:
@@ -73,7 +73,7 @@ public class Sorter {
 
 **Solución Modelo:**
 
-1. **Fragmento 1: Template Method Pattern**
+1. **Fragmento 1. Template Method Pattern**
    - Descripción: Define el esqueleto de un algoritmo, delegando algunos pasos a subclases
    - Indicadores: Método `final` con estructura fija, métodos `abstract` para pasos variables
    - Propósito: Reutilizar estructura común mientras permite personalización
@@ -136,7 +136,7 @@ Para cada escenario, indica qué patrón es más apropiado y por qué:
 
 ### ⭐⭐ NIVEL 2: Implementación Básica
 
-#### Ejercicio 2.1: Implementar Strategy Pattern - Sistema de Envío
+#### Ejercicio 2.1. Implementar Strategy Pattern - Sistema de Envío
 
 **Enunciado:**
 Implementa un sistema de cálculo de costos de envío que soporte múltiples estrategias:
@@ -489,7 +489,7 @@ class TemperatureSensorTest {
 
 ### ⭐⭐⭐ NIVEL 3: Integración de Patrones
 
-#### Ejercicio 3.1: Coffee Shop con Strategy y Decorator
+#### Ejercicio 3.1. Coffee Shop con Strategy y Decorator
 
 **Enunciado:**
 Implementa un sistema de cafetería que combine:
@@ -600,7 +600,7 @@ System.out.println(order.getDescription() + ": $" + order.getFinalPrice());
 
 ### ⭐⭐⭐⭐ NIVEL 4: Proyecto Completo
 
-#### Ejercicio 4.1: Sistema de Notificaciones Multi-Canal
+#### Ejercicio 4.1. Sistema de Notificaciones Multi-Canal
 
 Implementa un sistema completo que combine:
 - **Observer**: Para múltiples suscriptores

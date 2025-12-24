@@ -18,7 +18,7 @@ void testLegacyBehavior() {
 ### 2. Refactorizar Incrementalmente
 
 ```java
-// Paso 1: Extract Method
+// Paso 1. Extract Method
 void complexMethod(Input input) {
     validate(input); // Extraído
     Result result = process(input); // Extraído

@@ -1,8 +1,8 @@
 # Ejercicios: God Classes y Feature Envy
 
-## ⭐ Nivel 1: Identificación
+## ⭐ Nivel 1. Identificación
 
-### Ejercicio 1.1: Detectar God Class
+### Ejercicio 1.1. Detectar God Class
 
 Analiza esta clase y justifica si es una God Class:
 
@@ -63,7 +63,7 @@ public class ShoppingCart {
 
 ## ⭐⭐ Nivel 2: Refactorización
 
-### Ejercicio 2.1: Descomponer God Class
+### Ejercicio 2.1. Descomponer God Class
 
 Refactoriza esta God Class en clases especializadas:
 

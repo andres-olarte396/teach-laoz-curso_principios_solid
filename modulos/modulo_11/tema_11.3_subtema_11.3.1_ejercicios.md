@@ -1,6 +1,6 @@
 # Ejercicios: Database per Service y Sagas
 
-## ⭐ Ejercicio 1: Identificar Violaciones de Database per Service
+## ⭐ Ejercicio 1. Identificar Violaciones de Database per Service
 
 Analiza este código y encuentra las violaciones:
 
@@ -357,7 +357,7 @@ public class OrderSagaOrchestrator {
         stateRepository.save(state);
         
         try {
-            // Step 1: Reserve Inventory (with timeout & retry)
+            // Step 1. Reserve Inventory (with timeout & retry)
             String reservationId = executeWithRetry(
                 "reserveInventory",
                 () -> inventoryService.reserve(command.getItems()),

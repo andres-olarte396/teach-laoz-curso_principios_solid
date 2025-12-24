@@ -30,7 +30,7 @@ public class Employee {
     private String name;
     private double hourlyRate;
     
-    // Responsabilidad 1: Cálculo de salario (Departamento de Finanzas)
+    // Responsabilidad 1. Cálculo de salario (Departamento de Finanzas)
     public double calculatePay() {
         // Lógica de cálculo según políticas de RRHH
         return hourlyRate * 160; // 160 horas/mes
@@ -392,7 +392,7 @@ public class BlogPost {
     private LocalDateTime publishedAt;
     private String author;
     
-    // Responsabilidad 1: Validación de negocio
+    // Responsabilidad 1. Validación de negocio
     public boolean isValid() {
         return title != null && title.length() > 5 &&
                content != null && content.length() > 100;

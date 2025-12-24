@@ -1,6 +1,6 @@
 # Ejercicios: Saga Patterns
 
-## Ejercicio 1: Identificar Problemas ⭐
+## Ejercicio 1. Identificar Problemas ⭐
 
 ### Problema
 
@@ -16,7 +16,7 @@ class BookingService {
     ): Promise<Booking> {
         // ❌ Intento de transacción distribuida
         const booking = await this.db.transaction(async (trx) => {
-            // Servicio 1: Flight
+            // Servicio 1. Flight
             const flight = await this.flightService.book(flightId, userId);
             
             // Servicio 2: Hotel (otra DB)
@@ -107,7 +107,7 @@ class BookTripSagaOrchestrator {
         const sagaId = generateId();
         
         try {
-            // Step 1: Book flight
+            // Step 1. Book flight
             const flightBooking = await this.executeStep(sagaId, 'BookFlight', 
                 () => this.flightService.book(command.flightId, command.userId)
             );
@@ -857,7 +857,7 @@ class TransferMoneySagaOrchestrator {
         try {
             // 3. Execute steps with timeout
             await this.executeWithTimeout(async () => {
-                // Step 1: Validate from account
+                // Step 1. Validate from account
                 const fromAccount = await this.executeStepWithRetry(
                     sagaId,
                     'ValidateFromAccount',
@@ -1443,7 +1443,7 @@ class BookTripWithForwardRecoverySaga {
         });
         
         try {
-            // Step 1: Book hotel
+            // Step 1. Book hotel
             const hotelBooking = await this.executeStep(
                 sagaId,
                 'BookHotel',

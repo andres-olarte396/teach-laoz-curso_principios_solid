@@ -47,7 +47,7 @@ public class UserRegistrationForm extends JFrame {
 ## Solución: Separación en Capas
 
 ```java
-// CAPA 1: Dominio
+// CAPA 1. Dominio
 public class User {
     private String name;
     private String email;

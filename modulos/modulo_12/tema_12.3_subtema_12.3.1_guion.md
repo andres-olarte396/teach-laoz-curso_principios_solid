@@ -44,7 +44,7 @@ Hoy veremos cómo Saga Patterns resuelve esto con dos enfoques: Choreography y O
 @Transactional  // ❌ Esto NO funciona en microservicios
 public class OrderService {
     public Order createOrder(OrderRequest request) {
-        // Step 1: Save order (DB1)
+        // Step 1. Save order (DB1)
         Order order = orderRepository.save(new Order(request));
         
         // Step 2: Reserve inventory (DB2 - otro servicio!)
@@ -91,7 +91,7 @@ Result: Order cancelled, but inventory locked forever
 
 ---
 
-## [08:00 - 15:00] Solución 1: Choreography Saga
+## [08:00 - 15:00] Solución 1. Choreography Saga
 
 **[TRANSICIÓN: Arquitectura Choreography]**
 
@@ -291,7 +291,7 @@ public class CreateOrderSagaOrchestrator {
         sagaRepo.save(new SagaState(sagaId, "STARTED", command));
         
         try {
-            // Step 1: Create order
+            // Step 1. Create order
             var orderId = executeStep(sagaId, "CreateOrder", 
                 () -> orderService.create(command)
             );

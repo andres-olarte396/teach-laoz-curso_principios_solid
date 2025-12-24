@@ -12,7 +12,7 @@ Los **12-Factor App principles** son la base fundamental para aplicaciones cloud
 
 ## Los 12 Factores
 
-### Factor 1: Codebase (Base de Código)
+### Factor 1. Codebase (Base de Código)
 
 **Principio**: Una codebase rastreada en control de versiones, múltiples deploys.
 
@@ -437,7 +437,7 @@ on:
     branches: [main]
 
 jobs:
-  # STAGE 1: BUILD
+  # STAGE 1. BUILD
   build:
     runs-on: ubuntu-latest
     steps:
@@ -950,7 +950,7 @@ docker-compose up
 
 ---
 
-### Factor 11: Logs
+### Factor 11. Logs
 
 **Principio**: Tratar logs como event streams, escribir a stdout/stderr.
 

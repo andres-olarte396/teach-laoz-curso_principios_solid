@@ -323,10 +323,10 @@ class Rectangulo extends Forma {
 class Triangulo extends Forma {
     private base: number;
     private altura: number;
-    private lado1: number;
+    private lado1. number;
     private lado2: number;
     
-    constructor(color: string, base: number, altura: number, lado1: number, lado2: number) {
+    constructor(color: string, base: number, altura: number, lado1. number, lado2: number) {
         super(color);
         this.base = base;
         this.altura = altura;

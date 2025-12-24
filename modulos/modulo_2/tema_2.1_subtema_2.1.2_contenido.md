@@ -6,7 +6,7 @@ Identificar responsabilidades en código existente es una habilidad fundamental 
 
 En este módulo aprenderemos **técnicas sistemáticas** para detectar violaciones de SRP antes de que se conviertan en problemas de mantenibilidad.
 
-## Técnica 1: Análisis de Cohesión (LCOM)
+## Técnica 1. Análisis de Cohesión (LCOM)
 
 ### ¿Qué es LCOM?
 
@@ -31,7 +31,7 @@ public class UserService {
     private Connection dbConnection;
     private Logger logger;
     
-    // Método 1: Usa username, password
+    // Método 1. Usa username, password
     public boolean authenticate() {
         return username.equals("admin") && password.equals("secret");
     }
@@ -80,7 +80,7 @@ public class UserService {
 ```
 Grupos de cohesión detectados:
 
-Grupo 1: Autenticación
+Grupo 1. Autenticación
 ├── username
 ├── password
 ├── authenticate()
@@ -98,7 +98,7 @@ Grupo 3: Logging
 **Refactorización sugerida**:
 
 ```java
-// Responsabilidad 1: Autenticación
+// Responsabilidad 1. Autenticación
 public class Authenticator {
     private String username;
     private String password;
@@ -227,7 +227,7 @@ public class Employee {
 }
 ```
 
-**Paso 1: Identificar actores**
+**Paso 1. Identificar actores**
 
 | Método | Actor | Razón del Cambio Posible |
 |--------|-------|--------------------------|
@@ -641,7 +641,7 @@ Test requeriría:
 ### Refactorización Final
 
 ```java
-// Responsabilidad 1: Validación
+// Responsabilidad 1. Validación
 public class BlogPostValidator {
     public void validate(BlogPost post) {
         if (post.getTitle() == null || post.getTitle().isEmpty()) {
@@ -796,4 +796,4 @@ jdepend.xmlui.JDepend
 
 ---
 
-**Próximo paso**: En el siguiente subtema (**2.2.1: God Classes y Feature Envy**) estudiaremos antipatrones específicos que violan SRP y cómo refactorizarlos sistemáticamente.
+**Próximo paso**: En el siguiente subtema (**2.2.1. God Classes y Feature Envy**) estudiaremos antipatrones específicos que violan SRP y cómo refactorizarlos sistemáticamente.

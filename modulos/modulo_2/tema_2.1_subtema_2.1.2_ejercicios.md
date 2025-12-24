@@ -1,8 +1,8 @@
 # Ejercicios: Identificación Sistemática de Responsabilidades
 
-## ⭐ Nivel 1: Análisis LCOM
+## ⭐ Nivel 1. Análisis LCOM
 
-### Ejercicio 1.1: Calcular LCOM Manualmente
+### Ejercicio 1.1. Calcular LCOM Manualmente
 
 Calcula el LCOM de esta clase e identifica grupos de cohesión:
 
@@ -59,7 +59,7 @@ public class ProductCatalog {
 
 ## ⭐⭐ Nivel 2: Análisis Multi-Técnica
 
-### Ejercicio 2.1: Auditoría Completa
+### Ejercicio 2.1. Auditoría Completa
 
 Analiza esta clase usando las 7 técnicas del contenido:
 
@@ -144,7 +144,7 @@ public class CustomerService {
 
 ## ⭐⭐⭐ Nivel 3: Refactorización Guiada por Métricas
 
-### Ejercicio 3.1: Sistema de Reservas
+### Ejercicio 3.1. Sistema de Reservas
 
 Refactoriza el siguiente sistema aplicando análisis LCOM y de actores:
 
@@ -269,7 +269,7 @@ public class ReservationSystem {
 
 ## ⭐⭐⭐⭐ Nivel 4: Herramientas Automatizadas
 
-### Ejercicio 4.1: Análisis con SonarQube
+### Ejercicio 4.1. Análisis con SonarQube
 
 **Requisitos previos**: Docker instalado
 

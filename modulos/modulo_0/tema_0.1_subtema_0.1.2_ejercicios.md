@@ -2,9 +2,9 @@
 
 ## BANCO DE EJERCICIOS GRADUADOS
 
-### ⭐ NIVEL 1: Conceptuales (Comprensión)
+### ⭐ NIVEL 1. Conceptuales (Comprensión)
 
-#### Ejercicio 1.1: Identificar Herencia Incorrecta
+#### Ejercicio 1.1. Identificar Herencia Incorrecta
 
 **Enunciado:**
 Analiza las siguientes jerarquías de herencia e identifica cuáles son correctas y cuáles violan el principio IS-A:
@@ -63,7 +63,7 @@ class Cuadrado extends Rectangulo {}
 
 ### ⭐⭐ NIVEL 2: Prácticos (Implementación)
 
-#### Ejercicio 2.1: Sistema de Pagos Polimórfico
+#### Ejercicio 2.1. Sistema de Pagos Polimórfico
 
 **Enunciado:**
 Implementa un sistema de procesamiento de pagos que soporte múltiples métodos de pago usando herencia y polimorfismo.
@@ -391,7 +391,7 @@ class MetodoPagoTest {
 
 ### ⭐⭐⭐ NIVEL 3: Desafíos (Diseño Avanzado)
 
-#### Ejercicio 3.1: Sistema de Descuentos con Strategy Pattern
+#### Ejercicio 3.1. Sistema de Descuentos con Strategy Pattern
 
 **Enunciado:**
 Diseña un sistema de descuentos para un e-commerce usando herencia e interfaces. El sistema debe:
@@ -536,7 +536,7 @@ public class GestorDescuentos {
 
 ### ⭐⭐⭐⭐ NIVEL 4: Proyecto Integrador
 
-#### Ejercicio 4.1: Sistema de Gestión de Biblioteca
+#### Ejercicio 4.1. Sistema de Gestión de Biblioteca
 
 Implementa un sistema completo de biblioteca con:
 - Jerarquía de items (Libro, Revista, DVD, AudioLibro)
@@ -551,7 +551,7 @@ Este ejercicio requiere 800+ líneas de código con diseño OOP avanzado.
 
 ## ERRORES COMUNES Y SOLUCIONES
 
-### Error 1: Romper LSP con sobrescritura
+### Error 1. Romper LSP con sobrescritura
 
 ```java
 // ❌ MAL

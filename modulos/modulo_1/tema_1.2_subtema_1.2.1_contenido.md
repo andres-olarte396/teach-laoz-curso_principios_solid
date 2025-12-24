@@ -1,4 +1,4 @@
-# Subtema 1.2.1: Casos de Estudio de SRP en Sistemas Reales
+# Subtema 1.2.1. Casos de Estudio de SRP en Sistemas Reales
 
 ## 1. Introducción
 
@@ -8,7 +8,7 @@ Los casos de estudio reales demuestran cómo SRP impacta sistemas en producción
 - Comparativas antes/después con métricas cuantificables
 - Lecciones aprendidas de equipos reales
 
-## 2. Caso 1: Sistema de E-Commerce - Gestión de Pedidos
+## 2. Caso 1. Sistema de E-Commerce - Gestión de Pedidos
 
 ### 2.1 Contexto del Problema
 
@@ -25,7 +25,7 @@ public class OrderManager {
     private PaymentGateway paymentGateway;
     private InventoryDatabase inventoryDB;
     
-    // Responsabilidad 1: Validación
+    // Responsabilidad 1. Validación
     public boolean validateOrder(Order order) {
         // Validar datos del pedido
         if (order.getItems().isEmpty()) {
@@ -216,7 +216,7 @@ public class OrderManager {
 **Resultado después de refactorización:**
 
 ```java
-// ✅ Clase 1: Modelo de dominio puro
+// ✅ Clase 1. Modelo de dominio puro
 public class Order {
     private final String id;
     private String customerId;
@@ -691,7 +691,7 @@ public class ReportGenerator {
 
 ### 4.3 Refactorización por Pasos
 
-**Paso 1: Extraer Data Access**
+**Paso 1. Extraer Data Access**
 
 ```java
 public interface ReportDataProvider {
@@ -798,7 +798,7 @@ public class ReportGenerator {
 
 ### 5.1 Patrones Comunes
 
-**Patrón 1: Extract Service**
+**Patrón 1. Extract Service**
 - Cuando método no pertenece al modelo
 - Mover a clase especializada
 

@@ -14,7 +14,7 @@ Este subtema se enfoca en técnicas concretas para aplicar SRP en proyectos real
 
 ### 2.1 Metodología de 5 Pasos
 
-**Paso 1: Identificar Responsabilidades**
+**Paso 1. Identificar Responsabilidades**
 - Listar todos los métodos de la clase
 - Agrupar por concepto/dominio
 - Identificar actores que pedirían cambios
@@ -41,7 +41,7 @@ Este subtema se enfoca en técnicas concretas para aplicar SRP en proyectos real
 
 ### 2.2 Ejemplo Paso a Paso
 
-**PASO 1: Identificar Responsabilidades**
+**PASO 1. Identificar Responsabilidades**
 
 ```java
 // Clase original
@@ -51,7 +51,7 @@ public class Employee {
     private String department;
     private int hoursWorked;
     
-    // Grupo 1: Cálculos de nómina
+    // Grupo 1. Cálculos de nómina
     public double calculatePay() {
         return salary + calculateBonus();
     }
@@ -95,7 +95,7 @@ generateReport() → usa name, salary
 **PASO 3: Extraer Clases**
 
 ```java
-// ✅ Clase 1: Modelo de dominio puro
+// ✅ Clase 1. Modelo de dominio puro
 public class Employee {
     private final String id;
     private final String name;
@@ -468,7 +468,7 @@ public class UserAuthenticationService { }
 ```java
 // ❌ Señal: Cambiar por múltiples razones
 public class Product {
-    // Cambio 1: Nueva regla de precio
+    // Cambio 1. Nueva regla de precio
     double calculatePrice() { }
     
     // Cambio 2: Nuevo formato de persistencia
@@ -520,7 +520,7 @@ public class Customer {
 ### 6.1 Simplicidad vs Pureza
 
 ```java
-// Opción 1: SRP puro (muchas clases)
+// Opción 1. SRP puro (muchas clases)
 public class User { }
 public class UserValidator { }
 public class UserRepository { }

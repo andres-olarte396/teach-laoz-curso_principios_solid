@@ -1,6 +1,6 @@
 # Ejercicios: API Gateway y OCP
 
-## ⭐ Ejercicio 1: Gateway Básico Extensible
+## ⭐ Ejercicio 1. Gateway Básico Extensible
 
 Implementa un API Gateway simple que permita agregar nuevas rutas sin modificar el código core.
 

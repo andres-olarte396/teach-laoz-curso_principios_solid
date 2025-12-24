@@ -61,7 +61,7 @@ graph TB
 **Duración**: 4 horas
 **Objetivo**: Validar conocimientos de POO y nivelar conceptos fundamentales
 
-#### TEMA 0.1: Fundamentos de POO
+#### TEMA 0.1. Fundamentos de POO
 
 - **Subtema 0.1.1**: Repaso de Clases, Objetos y Encapsulación
   - Objetivo: Recordar los conceptos básicos de POO
@@ -87,12 +87,12 @@ graph TB
 
 ---
 
-### MÓDULO 1: Introducción a SOLID
+### MÓDULO 1. Introducción a SOLID
 
 **Duración**: 8 horas
 **Objetivo**: Comprender el origen, propósito y beneficios de los principios SOLID
 
-#### TEMA 1.1: Historia y Contexto
+#### TEMA 1.1. Historia y Contexto
 
 - **Subtema 1.1.1**: Origen de SOLID (Robert C. Martin)
   - Objetivo: Conocer el contexto histórico de SOLID
@@ -123,7 +123,7 @@ graph TB
 **Duración**: 18 horas
 **Objetivo**: Dominar el principio de responsabilidad única y aplicarlo en diseño de clases
 
-#### TEMA 2.1: Fundamentos del SRP
+#### TEMA 2.1. Fundamentos del SRP
 
 - **Subtema 2.1.1**: Definición: Una Clase, Una Razón para Cambiar
   - Objetivo: Comprender la definición formal de SRP
@@ -178,7 +178,7 @@ graph TB
 **Duración**: 20 horas
 **Objetivo**: Diseñar sistemas extensibles sin modificar código existente
 
-#### TEMA 3.1: Fundamentos del OCP
+#### TEMA 3.1. Fundamentos del OCP
 
 - **Subtema 3.1.1**: Definición: Abierto para Extensión, Cerrado para Modificación
   - Objetivo: Comprender la paradoja aparente del OCP
@@ -238,7 +238,7 @@ graph TB
 **Duración**: 18 horas
 **Objetivo**: Garantizar que las subclases sean sustituibles por sus clases base
 
-#### TEMA 4.1: Fundamentos del LSP
+#### TEMA 4.1. Fundamentos del LSP
 
 - **Subtema 4.1.1**: Definición: Contratos y Sustitución
   - Objetivo: Comprender LSP como extensión de diseño por contrato
@@ -298,7 +298,7 @@ graph TB
 **Duración**: 16 horas
 **Objetivo**: Diseñar interfaces cohesivas y específicas para cada cliente
 
-#### TEMA 5.1: Fundamentos del ISP
+#### TEMA 5.1. Fundamentos del ISP
 
 - **Subtema 5.1.1**: Definición: Interfaces Específicas por Cliente
   - Objetivo: Comprender el propósito de ISP
@@ -353,7 +353,7 @@ graph TB
 **Duración**: 20 horas
 **Objetivo**: Invertir dependencias para desacoplar módulos de alto y bajo nivel
 
-#### TEMA 6.1: Fundamentos del DIP
+#### TEMA 6.1. Fundamentos del DIP
 
 - **Subtema 6.1.1**: Definición: Depender de Abstracciones
   - Objetivo: Comprender la inversión de dependencias
@@ -420,7 +420,7 @@ graph TB
 **Duración**: 12 horas
 **Objetivo**: Aplicar los 5 principios de manera coordinada en diseño de sistemas
 
-#### TEMA 7.1: Interrelaciones entre Principios
+#### TEMA 7.1. Interrelaciones entre Principios
 
 - **Subtema 7.1.1**: SRP + DIP: Responsabilidades e Inyección
   - Objetivo: Comprender cómo SRP y DIP se complementan
@@ -456,7 +456,7 @@ graph TB
 **Duración**: 14 horas
 **Objetivo**: Identificar y corregir antipatrones mediante refactoring orientado a SOLID
 
-#### TEMA 8.1: Code Smells Comunes
+#### TEMA 8.1. Code Smells Comunes
 
 - **Subtema 8.1.1**: Long Method, Large Class, God Object
   - Objetivo: Reconocer smells que violan SRP
@@ -497,7 +497,7 @@ graph TB
 **Duración**: 16 horas
 **Objetivo**: Analizar proyectos open source y casos de industria aplicando SOLID
 
-#### TEMA 9.1: Análisis de Código Open Source
+#### TEMA 9.1. Análisis de Código Open Source
 
 - **Subtema 9.1.1**: Spring Framework y SOLID
   - Objetivo: Identificar aplicación de SOLID en Spring
@@ -528,7 +528,7 @@ graph TB
 **Duración**: 24 horas
 **Objetivo**: Diseñar e implementar un sistema completo aplicando todos los principios SOLID
 
-#### TEMA 10.1: Especificación del Proyecto
+#### TEMA 10.1. Especificación del Proyecto
 
 - **Subtema 10.1.1**: Sistema de Gestión de Biblioteca Digital
   - **Alcance**: Sistema con múltiples módulos (catálogo, préstamos, usuarios, notificaciones, reportes)

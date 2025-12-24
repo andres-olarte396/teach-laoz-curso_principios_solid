@@ -162,7 +162,7 @@ La magia: podemos tener **múltiples read models** para diferentes necesidades."
 **[ANIMACIÓN: Múltiples projections]**
 
 ```python
-# Projection 1: Para UI (datos básicos)
+# Projection 1. Para UI (datos básicos)
 class OrderSummaryProjection:
     async def project(self, event: OrderCreatedEvent):
         await db.insert('order_summaries', {

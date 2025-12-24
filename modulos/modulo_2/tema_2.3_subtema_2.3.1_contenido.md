@@ -121,7 +121,7 @@ public class User {
 
 // DESPUÉS: Clases especializadas
 
-// Clase 1: Perfil
+// Clase 1. Perfil
 public class UserProfile {
     private String name;
     private String email;

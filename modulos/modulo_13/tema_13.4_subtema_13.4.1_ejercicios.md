@@ -2,7 +2,7 @@
 
 ---
 
-## ⭐ Ejercicio 1: Instrumentar API con Prometheus
+## ⭐ Ejercicio 1. Instrumentar API con Prometheus
 
 **Objetivo**: Exponer métricas de una API Node.js y visualizarlas en Prometheus.
 
@@ -140,7 +140,7 @@ scrape_configs:
 **Ejecutar**:
 
 ```bash
-# Terminal 1: API
+# Terminal 1. API
 npm install express prom-client
 ts-node src/app.ts
 
@@ -200,7 +200,7 @@ open http://localhost:3000
 # Login: admin / admin
 ```
 
-### Panel 1: Request Rate
+### Panel 1. Request Rate
 
 1. **Add Panel** → **Add new panel**
 2. **Query**:

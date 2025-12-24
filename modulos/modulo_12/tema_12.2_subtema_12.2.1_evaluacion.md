@@ -1,6 +1,6 @@
 # Evaluación: CQRS Pattern
 
-## Parte 1: Conceptos Fundamentales (20 puntos)
+## Parte 1. Conceptos Fundamentales (20 puntos)
 
 ### Pregunta 1 (7 puntos)
 Explica qué problema resuelve CQRS y por qué no es apropiado para todas las aplicaciones.

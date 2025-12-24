@@ -272,7 +272,7 @@ open http://localhost:3000
 
 ### Crear Dashboard
 
-#### Panel 1: Request Rate
+#### Panel 1. Request Rate
 
 1. **Create Dashboard** → **Add Panel**
 2. **Query**:
